@@ -5,7 +5,7 @@ import TestLotOfContent from "../components/TestLotOfContent.vue";
 <template>
   <div class="home-container">
     <div class="section">
-      <h1>OUTSPOKEN FRONT END DESIGN</h1>
+      <h1>OUTSPOKEN sample FRONT END DESIGN</h1>
     </div>
   </div>
 </template>
