@@ -1,5 +1,6 @@
 :root {
   --color-background: #0b0f1b;
+  --color-background-layout: #0b0f1b9a;
   --color-text: #c7c7c7;
   --color-font: #c7c7c7;
   --color-accent-1: #34396a;
@@ -7,6 +8,8 @@
 
   --size-navbar-height: 4rem;
   --size-footer-height: 4rem;
+
+  --container-height: calc(100vh - var(--size-navbar-height));
 }
 
 /* color palette from <https://github.com/vuejs/theme> */

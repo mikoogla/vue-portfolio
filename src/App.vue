@@ -20,7 +20,6 @@ import Footer from "./components/Footer.vue";
   width: 100%;
 }
 .main-container {
-  height: calc(100% - var(--size-navbar-height));
-  background-color: rgb(0, 0, 0);
+  min-height: var(--container-height);
 }
 </style>
