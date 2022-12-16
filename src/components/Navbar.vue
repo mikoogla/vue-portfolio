@@ -71,4 +71,10 @@ function languageChange() {
     justify-content: right;
   }
 }
+
+@media (max-width: 300px) {
+  .logo {
+    display: none;
+  }
+}
 </style>

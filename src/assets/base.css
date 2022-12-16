@@ -6,10 +6,35 @@
   --color-accent-1: #34396a;
   --color-accent-2: #3182ce;
 
+  --size-font: 1.2rem;
   --size-navbar-height: 4rem;
   --size-footer-height: 4rem;
 
   --container-height: calc(100vh - var(--size-navbar-height));
+  --h1-font-size: 4rem;
+}
+@media (max-width: 768px), (max-height: 768px) {
+  :root {
+    --h1-font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --h1-font-size: calc(10vw);
+  }
+}
+
+@media (max-height: 500px) {
+  :root {
+    --h1-font-size: calc(10vh);
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --size-font: calc(5vw);
+  }
 }
 
 /* color palette from <https://github.com/vuejs/theme> */

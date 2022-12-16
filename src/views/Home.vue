@@ -14,7 +14,7 @@ import TestLotOfContent from "../components/TestLotOfContent.vue";
 
 <style scoped>
 h1 {
-  font-size: 4rem;
+  font-size: var(--h1-font-size);
   font-weight: 700;
   text-align: left;
   max-width: 300px;
