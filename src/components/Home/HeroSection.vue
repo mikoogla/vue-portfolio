@@ -86,15 +86,12 @@ h1 {
 @media (max-width: 500px) {
   .button-container {
     max-width: none;
-    padding-bottom: 80px;
-    background-color: rgb(47, 0, 255);
   }
 }
 @media only screen and (max-width: 500px) {
   .button-container {
     max-width: none;
-    padding-bottom: 100px;
-    background-color: rgb(255, 0, 200);
+    padding-bottom: 120px;
   }
 }
 </style>
