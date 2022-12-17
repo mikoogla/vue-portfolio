@@ -25,8 +25,8 @@ function languageChange() {
 
 <style scoped>
 .navbar-container {
-  max-height: 4rem;
-  padding: 20px 50px;
+  max-height: var(--size-navbar-height);
+  padding: 13px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,6 @@ function languageChange() {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 700;
 }
 .navigation {
   width: 50%;
@@ -75,6 +74,9 @@ function languageChange() {
 @media (max-width: 300px) {
   .logo {
     display: none;
+  }
+  .navbar-container {
+    padding: 10px 20px;
   }
 }
 </style>

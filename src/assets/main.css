@@ -6,6 +6,7 @@ body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   font-size: var(--size-font);
+  font-weight: var(--weight-normal);
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);

@@ -4,36 +4,43 @@
   --color-text: #c7c7c7;
   --color-font: #c7c7c7;
   --color-accent-1: #34396a;
+  --color-accent-1-opacity: #34396a79;
   --color-accent-2: #3182ce;
+  --color-accent-2-opacity: #3182ce79;
 
-  --size-font: 1.2rem;
+  --size-font: 1rem;
   --size-navbar-height: 4rem;
   --size-footer-height: 4rem;
+  --size-font-button: 1.4rem;
+  --size-icon: 1.5rem;
+  --size-h1: 3rem;
+
+  --weight-normal: 400;
+  --weight-heavy: 700;
 
   --container-height: calc(100vh - var(--size-navbar-height));
-  --h1-font-size: 4rem;
 }
 @media (max-width: 768px), (max-height: 768px) {
   :root {
     --h1-font-size: 3.5rem;
+    --size-font: 15px;
+    --size-font-button: 18px;
   }
 }
-
 @media (max-width: 500px) {
   :root {
-    --h1-font-size: calc(10vw);
+    --size-font: 12px;
   }
 }
-
 @media (max-height: 500px) {
   :root {
     --h1-font-size: calc(10vh);
   }
 }
-
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   :root {
-    --size-font: calc(5vw);
+    --size-h1: calc(12vw);
+    --size-font-button: 16px;
   }
 }
 

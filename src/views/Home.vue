@@ -1,11 +1,29 @@
 <script setup>
 import TestLotOfContent from "../components/TestLotOfContent.vue";
+import Button from "../UI/Button.vue";
 </script>
 
 <template>
   <div class="home-container">
     <div class="section">
-      <h1>OUTSPOKEN FRONT END DESIGN</h1>
+      <div class="title">
+        <h1>OUTSPOKEN FRONT END DESIGN</h1>
+      </div>
+
+      <div class="button-container">
+        <Button>
+          <template #icon>
+            <span class="material-symbols-outlined"> code </span>
+          </template>
+          <template #text>See My Work</template>
+        </Button>
+        <Button>
+          <template #icon>
+            <span class="material-symbols-outlined"> email </span>
+          </template>
+          <template #text>Contact Me</template>
+        </Button>
+      </div>
     </div>
   </div>
 </template>
@@ -14,23 +32,37 @@ import TestLotOfContent from "../components/TestLotOfContent.vue";
 
 <style scoped>
 h1 {
-  font-size: var(--h1-font-size);
-  font-weight: 700;
-  text-align: left;
   max-width: 300px;
-  padding-left: 20px;
+  text-align: left;
+  font-weight: var(--weight-normal);
+  font-size: var(--size-h1);
+  overflow: hidden;
 }
-
+.title {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
 .section {
   background-color: var(--color-background-layout);
   height: 100%;
   width: 40%;
   min-width: 500px;
   display: flex;
-  justify-content: left;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.button-container {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 50px 20px;
+  gap: 20px;
 }
 .home-container {
   height: var(--container-height);
@@ -49,6 +81,12 @@ h1 {
     width: 100%;
     min-width: 0;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .button-container {
+    max-width: none;
   }
 }
 </style>
