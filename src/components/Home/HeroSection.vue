@@ -1,15 +1,36 @@
 <script setup>
-import TestLotOfContent from "../components/TestLotOfContent.vue";
-import HeroSection from "../components/Home/HeroSection.vue";
+import Button from "../../UI/Button.vue";
 </script>
 
 <template>
-  <HeroSection />
+  <div class="home-container">
+    <div class="section">
+      <div class="title">
+        <h1>OUTSPOKEN FRONT END DESIGN</h1>
+      </div>
+
+      <div class="button-container">
+        <Button>
+          <template #icon>
+            <span class="material-symbols-outlined"> code </span>
+          </template>
+          <template #text>See My Work</template>
+        </Button>
+        <Button>
+          <template #icon>
+            <span class="material-symbols-outlined"> email </span>
+          </template>
+          <template #text>Contact Me</template>
+        </Button>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script></script>
 
 <style scoped>
-/* h1 {
+h1 {
   max-width: 300px;
   text-align: left;
   font-weight: var(--weight-normal);
@@ -48,7 +69,7 @@ import HeroSection from "../components/Home/HeroSection.vue";
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  background-image: url("../assets/background.png");
+  background-image: url("../../assets/background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,5 +87,5 @@ import HeroSection from "../components/Home/HeroSection.vue";
   .button-container {
     max-width: none;
   }
-} */
+}
 </style>
