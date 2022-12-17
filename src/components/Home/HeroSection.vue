@@ -86,6 +86,7 @@ h1 {
 @media (max-width: 500px) {
   .button-container {
     max-width: none;
+    padding-bottom: 80px;
   }
 }
 </style>
