@@ -6,7 +6,7 @@
       >
     </div>
     <div class="text">
-      <slot name="text">Submit</slot>
+      <slot name="text">button</slot>
     </div>
   </button>
 </template>
