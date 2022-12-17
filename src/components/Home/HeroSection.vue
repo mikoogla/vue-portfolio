@@ -89,4 +89,10 @@ h1 {
     padding-bottom: 80px;
   }
 }
+@media handheld {
+  .button-container {
+    max-width: none;
+    padding-bottom: 100px;
+  }
+}
 </style>
