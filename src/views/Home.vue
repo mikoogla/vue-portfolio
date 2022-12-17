@@ -1,10 +1,12 @@
 <script setup>
 import TestLotOfContent from "../components/TestLotOfContent.vue";
 import HeroSection from "../components/Home/HeroSection.vue";
+import ProjectSection from "../components/Home/ProjectSection.vue";
 </script>
 
 <template>
   <HeroSection />
+  <ProjectSection />
 </template>
 <script></script>
 

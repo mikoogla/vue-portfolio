@@ -82,6 +82,12 @@ h1 {
     overflow: hidden;
   }
 }
+@media (max-height: 600px) and (min-width: 560px) {
+  .section {
+    flex-direction: row;
+    width: auto;
+  }
+}
 
 @media (max-width: 500px) {
   .button-container {

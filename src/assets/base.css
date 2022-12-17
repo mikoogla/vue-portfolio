@@ -32,9 +32,9 @@
     --size-font: 12px;
   }
 }
-@media (max-height: 500px) {
+@media (max-height: 350px) {
   :root {
-    --h1-font-size: calc(10vh);
+    --size-h1: calc(12vh);
   }
 }
 @media (max-width: 360px) {
