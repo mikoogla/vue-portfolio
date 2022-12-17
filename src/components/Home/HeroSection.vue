@@ -87,14 +87,14 @@ h1 {
   .button-container {
     max-width: none;
     padding-bottom: 80px;
-    background-color: green;
+    background-color: rgb(47, 0, 255);
   }
 }
-@media handheld {
+@media only screen and (max-width: 500px) {
   .button-container {
     max-width: none;
     padding-bottom: 100px;
-    background-color: red;
+    background-color: rgb(255, 0, 200);
   }
 }
 </style>
