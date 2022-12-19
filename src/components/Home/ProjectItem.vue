@@ -1,6 +1,7 @@
 <script setup>
 import Card from "../../UI/Card.vue";
 import Button from "../../UI/Button.vue";
+import defaultimage from "../../assets/defaultimage.png";
 </script>
 
 <template>
@@ -65,7 +66,7 @@ export default {
   props: {
     backgroundUrl: {
       type: String,
-      default: "/src/assets/default.png",
+      default: defaultimage,
     },
   },
   mounted() {
