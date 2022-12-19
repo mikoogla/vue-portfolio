@@ -37,6 +37,10 @@ import Button from "../../UI/Button.vue";
         </div>
       </form>
     </Card>
+    <div class="success">
+      <p>Thank you for your message!</p>
+      <p>I will reply ASAP</p>
+    </div>
   </div>
 </template>
 
@@ -86,7 +90,9 @@ textarea {
   height: 6rem;
 }
 input:focus,
-input:active {
+input:active,
+textarea:focus,
+textarea:active {
   outline: 1px solid var(--color-accent-2);
 }
 h1 {
@@ -138,6 +144,16 @@ h1 {
   gap: 50px;
 }
 
+.success {
+  position: fixed;
+  bottom: 20px;
+  background-color: rgba(6, 85, 6, 0.404);
+  padding: 20px;
+  width: 60%;
+  text-align: center;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
 @media (max-width: 768px) {
   .card {
     width: 100%;
