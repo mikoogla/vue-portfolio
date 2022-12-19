@@ -90,6 +90,7 @@ h1 {
   .cards-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 3rem 0;
   }
 }
 </style>
