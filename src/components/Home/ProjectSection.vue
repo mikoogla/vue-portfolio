@@ -73,15 +73,10 @@ h1 {
 .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr;
+  grid-template-rows: 1fr;
   grid-gap: 20px;
+
   padding: 20px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap; */
 }
 
 @media (max-width: 1300px) {

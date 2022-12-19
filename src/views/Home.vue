@@ -1,5 +1,6 @@
 <script setup>
 import AboutSection from "../components/Home/AboutSection.vue";
+import ContactSection from "../components/Home/ContactSection.vue";
 import HeroSection from "../components/Home/HeroSection.vue";
 import ProjectSection from "../components/Home/ProjectSection.vue";
 </script>
@@ -8,6 +9,7 @@ import ProjectSection from "../components/Home/ProjectSection.vue";
   <HeroSection />
   <AboutSection />
   <ProjectSection />
+  <ContactSection />
 </template>
 <script></script>
 

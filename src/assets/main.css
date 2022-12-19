@@ -13,6 +13,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
 }
 #app {
   max-width: 1920px;
