@@ -9,8 +9,9 @@
 <style scoped>
 .card-container {
   border-radius: 10px;
-  border: 1px solid var(--color-accent-1);
+  border: 0px solid var(--color-accent-1);
   box-shadow: var(--size-box-shadow);
+  backdrop-filter: brightness(0.5);
 }
 .default {
   padding: 20px;

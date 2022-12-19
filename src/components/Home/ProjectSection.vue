@@ -23,7 +23,7 @@ import mockup3 from "../../assets/mockup3.jpg";
       </ProjectItem>
 
       <ProjectItem :background-url="mockup3">
-        <template #title> LLA - Learning Languages App </template>
+        <template #title> Learning Languages App </template>
         <template #description> Languages learned only with practice </template>
         <template #iconName> tips_and_updates </template>
         <template #buttonText> More Info </template>
@@ -53,12 +53,24 @@ h1 {
 }
 
 .cards-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-gap: 20px;
+  padding: 20px;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+}
+
+@media (max-width: 1300px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 </style>
 s

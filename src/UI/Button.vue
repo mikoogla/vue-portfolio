@@ -28,6 +28,7 @@
   gap: 20px;
   transition: all 0.2s ease-in-out;
   width: var(--width-button);
+  border-radius: 5px;
 }
 .btn-main:hover {
   background-color: var(--color-accent-1);

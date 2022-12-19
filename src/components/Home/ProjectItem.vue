@@ -75,10 +75,6 @@ export default {
 </script>
 
 <style scoped>
-.description,
-.title {
-  max-width: 50%;
-}
 .item-container {
   font-size: var(--size-font-medium);
   min-height: 40vh;
@@ -87,10 +83,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.left,
-.right {
-  width: 50%;
-}
+
 .right {
   width: 100%;
   border-radius: 0 10px 10px 0;
