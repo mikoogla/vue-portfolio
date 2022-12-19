@@ -11,11 +11,20 @@ import Button from "../../UI/Button.vue";
       <form class="form" @submit.prevent="onSubmit">
         <div class="email">
           <label for="email">Your Email</label>
-          <input type="text" v-model="email" placeholder="email" />
+          <input type="email" v-model="email" placeholder="email" />
         </div>
         <div class="message">
           <label for="message">Message</label>
-          <textarea type="text" v-model="message" placeholder="message" />
+          <textarea
+            required
+            type="text"
+            v-model="message"
+            placeholder="message"
+          />
+        </div>
+        <div class="name">
+          <label for="name">Your Name</label>
+          <input required type="text" v-model="name" placeholder="name" />
         </div>
 
         <div class="button-container">
@@ -37,6 +46,7 @@ export default {
     return {
       message: "",
       email: "",
+      name: "",
     };
   },
   methods: {
@@ -46,11 +56,12 @@ export default {
       axios.post(
         "https://discord.com/api/webhooks/1054438690547580968/s-96_bATNcPr71tFWhDhlqPHoV6JhD2yyp8Qf_PlVbYKbj4PscAYDtipaDTRi-O22B8Q",
         {
-          content: `Email: ${this.email} \n Message: ${this.message}  `,
+          content: `Name: ${this.name} \n Email: ${this.email} \n Message: ${this.message}  `,
         }
       );
       this.message = "";
       this.email = "";
+      this.name = "";
     },
   },
 
@@ -92,7 +103,6 @@ h1 {
   justify-content: end;
 }
 .button {
-  width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,7 +112,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 }
 .contact-container {
   font-size: var(--size-font-medium);
@@ -127,5 +136,27 @@ h1 {
   justify-content: center;
   align-items: left;
   gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  .form {
+    padding: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .email,
+  .message,
+  .name {
+    width: 80%;
+  }
+  .button-container {
+    width: 80%;
+  }
 }
 </style>
