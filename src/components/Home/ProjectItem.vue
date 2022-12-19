@@ -131,7 +131,7 @@ import Button from "../../UI/Button.vue";
   .technologies {
     border-radius: 0 0 10px 10px;
     width: 100%;
-    height: 100px;
+    height: var(--size-overlay-height);
     background-color: var(--color-background-layout);
   }
   .description,

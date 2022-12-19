@@ -8,17 +8,6 @@
   --color-accent-2: #3182ce;
   --color-accent-2-opacity: #3182ce79;
 
-  --size-navbar-text: 1.1rem;
-  --size-navbar-height: 4rem;
-  --size-footer-height: 4rem;
-  --size-footer-text: 1.1rem;
-  --size-icon: 1.5rem;
-
-  --weight-normal: 400;
-  --weight-heavy: 700;
-
-  --container-height: calc(100vh - var(--size-navbar-height));
-
   --prescaler: 0rem;
 
   --size-font-small: calc(0.8rem - var(--prescaler));
@@ -26,6 +15,16 @@
   --size-font-medium: calc(1.2rem - var(--prescaler));
   --size-font-large: calc(1.4rem - var(--prescaler));
   --size-h1: calc(3rem - var(--prescaler));
+
+  --size-navbar-height: 4rem;
+  --size-footer-height: 4rem;
+  --size-overlay-height: calc(4rem - var(--prescaler));
+  --size-icon: 1.5rem;
+
+  --weight-normal: 400;
+  --weight-heavy: 700;
+
+  --container-height: calc(100vh - var(--size-navbar-height));
 }
 
 @media (max-width: 768px) {
