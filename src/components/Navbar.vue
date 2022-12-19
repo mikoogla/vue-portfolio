@@ -2,9 +2,9 @@
   <div class="navbar-container">
     <div class="logo">Mikoogla</div>
     <div class="navigation">
-      <RouterLink class="mobile-off" to="/">Home</RouterLink>
-      <RouterLink class="mobile-off" to="/contact">Contact</RouterLink>
-      <div @click="languageChange" class="language mobile-off">
+      <RouterLink class="mobile-off navtext" to="/">Home</RouterLink>
+      <RouterLink class="mobile-off navtext" to="/contact">Contact</RouterLink>
+      <div @click="languageChange" class="language mobile-off navtext">
         ENG<span class="material-symbols-outlined"> translate </span>
       </div>
       <span @click="showMenu" class="material-symbols-outlined mobile-on">
@@ -24,6 +24,9 @@ function languageChange() {
 </script>
 
 <style scoped>
+.navtext {
+  font-size: var(--size-font-medium);
+}
 .navbar-container {
   max-height: var(--size-navbar-height);
   padding: 13px 50px;

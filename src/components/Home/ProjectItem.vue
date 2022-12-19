@@ -55,6 +55,7 @@ import Button from "../../UI/Button.vue";
   max-width: 50%;
 }
 .item-container {
+  font-size: var(--size-font);
   min-height: 40vh;
   padding: 0 0 0 20px;
   display: grid;

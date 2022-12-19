@@ -6,6 +6,7 @@
 
 <style scoped>
 .footer-container {
+  font-size: var(--size-font-medium);
   height: var(--size-footer-height);
   display: flex;
   justify-content: center;

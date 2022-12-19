@@ -19,7 +19,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  font-size: var(--size-font-button);
+  font-size: var(--size-font-large);
   height: var(--height-button);
   justify-content: left;
   align-items: center;
