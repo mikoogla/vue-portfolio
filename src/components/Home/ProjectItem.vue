@@ -4,7 +4,7 @@ import Button from "../../UI/Button.vue";
 </script>
 
 <template>
-  <Card>
+  <Card :style="{ width: '100%' }">
     <div class="item-container">
       <div class="left">
         <div class="title">
@@ -14,13 +14,11 @@ import Button from "../../UI/Button.vue";
         </div>
         <div class="description">
           <slot name="description">
-            <p>
-              Application built to help you learn the language in a natural way,
-              using known words dictionary and your own materials.
-              <strong
-                >Placeholders: title, description, iconName, buttonText</strong
-              >
-            </p>
+            Application built to help you learn the language in a natural way,
+            using known words dictionary and your own materials.
+            <strong
+              >Placeholders: title, description, iconName, buttonText</strong
+            >
           </slot>
         </div>
         <div class="button-container">
@@ -36,7 +34,10 @@ import Button from "../../UI/Button.vue";
           </Button>
         </div>
       </div>
-      <div class="right">
+      <div
+        class="right"
+        :style="{ backgroundImage: `url(&quot;${backgroundUrl}&quot;)` }"
+      >
         <div class="technologies">
           <slot name="technologies">
             <p>techbar</p>
@@ -59,7 +60,19 @@ import Button from "../../UI/Button.vue";
   </Card>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: {
+    backgroundUrl: {
+      type: String,
+      default: "/src/assets/default.png",
+    },
+  },
+  mounted() {
+    console.log("url: " + this.backgroundUrl);
+  },
+};
+</script>
 
 <style scoped>
 .description,
@@ -81,7 +94,7 @@ import Button from "../../UI/Button.vue";
 .right {
   width: 100%;
   border-radius: 0 10px 10px 0;
-  background-image: url("../../assets/mockup.jpg");
+  /* background-image: url("../../assets/mockup.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
