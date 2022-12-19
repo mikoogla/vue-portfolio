@@ -5,7 +5,7 @@ import defaultimage from "../../assets/default.png";
 </script>
 
 <template>
-  <Card :style="{ width: '100%' }">
+  <Card :style="{ width: '100%' }" class="interaction">
     <div class="item-container">
       <div class="left">
         <div class="title">
@@ -76,6 +76,11 @@ export default {
 </script>
 
 <style scoped>
+.interaction:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+
 .item-container {
   font-size: var(--size-font-medium);
   min-height: 40vh;

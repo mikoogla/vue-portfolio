@@ -1,6 +1,4 @@
 <script setup>
-import Button from "../../UI/Button.vue";
-import Card from "../../UI/Card.vue";
 import ProjectItem from "./ProjectItem.vue";
 import mockup2 from "../../assets/mockup2.png";
 import mockup3 from "../../assets/mockup3.jpg";
@@ -94,4 +92,3 @@ h1 {
   }
 }
 </style>
-s
