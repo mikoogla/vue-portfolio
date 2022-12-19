@@ -9,7 +9,7 @@ import Button from "../../UI/Button.vue";
       <div class="left">
         <div class="title">
           <slot name="title">
-            <h1>Project title</h1>
+            <h1>Quizx - Quiz App</h1>
           </slot>
         </div>
         <div class="description">
@@ -42,6 +42,18 @@ import Button from "../../UI/Button.vue";
             <p>techbar</p>
           </slot>
         </div>
+      </div>
+      <div class="mobile-button">
+        <Button class="button-styling-mobile">
+          <template #icon>
+            <span class="material-symbols-outlined">
+              <slot name="iconName"> tune </slot></span
+            >
+          </template>
+          <template #text>
+            <slot name="buttonText"> More Info </slot>
+          </template>
+        </Button>
       </div>
     </div>
   </Card>
@@ -96,6 +108,9 @@ import Button from "../../UI/Button.vue";
   backdrop-filter: blur(5px);
 }
 
+.mobile-button {
+  display: none;
+}
 @media (max-width: 768px) {
   .item-container {
     grid-template-columns: 1fr;
@@ -124,9 +139,20 @@ import Button from "../../UI/Button.vue";
     max-width: none;
   }
   .button-container {
-    width: 100%;
+    display: none;
+  }
+  .mobile-button {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-background-layout);
+    border-radius: 0 0 10px 10px;
+    padding: 20px 0;
+  }
+  .button-styling-mobile {
+    width: 80%;
+    justify-content: center;
   }
 }
 </style>
