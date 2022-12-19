@@ -8,9 +8,9 @@ import Button from "../../UI/Button.vue";
     <div class="item-container">
       <div class="left">
         <div class="title">
-          <slot name="title">
-            <h1>Quizx - Quiz App</h1>
-          </slot>
+          <h2>
+            <slot name="title"> Quizx - Quiz App </slot>
+          </h2>
         </div>
         <div class="description">
           <slot name="description">
@@ -80,7 +80,7 @@ export default {
   max-width: 50%;
 }
 .item-container {
-  font-size: var(--size-font);
+  font-size: var(--size-font-medium);
   min-height: 40vh;
   padding: 0 0 0 20px;
   display: grid;

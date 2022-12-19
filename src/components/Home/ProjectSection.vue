@@ -11,9 +11,7 @@ import mockup3 from "../../assets/mockup3.jpg";
     <h1>MY PROJECTS</h1>
     <div class="cards-container">
       <ProjectItem :background-url="mockup2">
-        <template #title>
-          <h1>Quizx - Quiz App</h1>
-        </template>
+        <template #title> Quizx - Quiz App </template>
         <template #description>
           Project where you can learn by solving single-choice questions.
         </template>
@@ -25,9 +23,7 @@ import mockup3 from "../../assets/mockup3.jpg";
       </ProjectItem>
 
       <ProjectItem :background-url="mockup3">
-        <template #title>
-          <h1>LLA - Learning Languages App</h1>
-        </template>
+        <template #title> LLA - Learning Languages App </template>
         <template #description> Languages learned only with practice </template>
         <template #iconName> tips_and_updates </template>
         <template #buttonText> More Info </template>
