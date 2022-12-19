@@ -50,19 +50,20 @@ import Button from "../../UI/Button.vue";
 <script></script>
 
 <style scoped>
+.description,
+.title {
+  max-width: 50%;
+}
 .item-container {
   min-height: 40vh;
   padding: 0 0 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
 }
 .left,
 .right {
   width: 50%;
-
-  /* create rounded corners */
 }
 .right {
   width: 100%;
@@ -78,6 +79,7 @@ import Button from "../../UI/Button.vue";
 }
 
 .left {
+  width: 100%;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -90,5 +92,40 @@ import Button from "../../UI/Button.vue";
   border-radius: 0 10px 10px 0;
   height: 100%;
   background-color: var(--color-background-layout);
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+  .item-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+  }
+  .left {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+
+  .right {
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    border-radius: 0 0 10px 10px;
+  }
+  .technologies {
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-background-layout);
+  }
+  .description,
+  .title {
+    max-width: none;
+  }
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
 }
 </style>

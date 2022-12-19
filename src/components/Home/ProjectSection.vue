@@ -11,7 +11,6 @@ import ProjectItem from "./ProjectItem.vue";
       <ProjectItem />
       <ProjectItem />
       <ProjectItem />
-      <ProjectItem />
     </div>
   </div>
 </template>
