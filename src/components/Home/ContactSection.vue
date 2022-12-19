@@ -139,6 +139,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 .form {
   padding: 20px;

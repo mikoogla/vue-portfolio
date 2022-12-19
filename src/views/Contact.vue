@@ -1,12 +1,13 @@
-<script setup></script>
+<script setup>
+import ContactSection from "../components/Home/ContactSection.vue";
+</script>
 
-<template><div class="contact-container">contact page</div></template>
+<template>
+  <div class="contact-container">
+    <ContactSection />
+  </div>
+</template>
 
 <script></script>
 
-<style scoped>
-.contact-container {
-  background-color: black;
-  color: white;
-}
-</style>
+<style scoped></style>
