@@ -82,6 +82,10 @@ h1 {
 
   backdrop-filter: brightness(0.8);
 }
+.text-and-photo:hover {
+  transform: rotate(0.4deg);
+  transition: 0.5s;
+}
 @media (max-width: 1100px) {
   .text-and-photo {
     flex-direction: column;
