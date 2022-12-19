@@ -37,8 +37,8 @@ import Button from "../../UI/Button.vue";
         </div>
       </form>
     </Card>
-    <div class="success">
-      <p>Thank you for your message!</p>
+    <div class="success" :class="{ visible: successMessage }">
+      <p>Thanks for the message!</p>
       <p>I will reply ASAP</p>
     </div>
   </div>
@@ -51,6 +51,7 @@ export default {
       message: "",
       email: "",
       name: "",
+      successMessage: false,
     };
   },
   methods: {
@@ -66,6 +67,11 @@ export default {
       this.message = "";
       this.email = "";
       this.name = "";
+
+      this.successMessage = true;
+      setTimeout(() => {
+        this.successMessage = false;
+      }, 5000);
     },
   },
 
@@ -153,6 +159,11 @@ h1 {
   text-align: center;
   border-radius: 5px;
   backdrop-filter: blur(10px);
+  display: none;
+  transition: all 0.5s ease;
+}
+.visible {
+  display: block;
 }
 @media (max-width: 768px) {
   .card {
