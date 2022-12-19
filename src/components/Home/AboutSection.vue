@@ -7,25 +7,13 @@ import about3 from "../../assets/about3.png";
   <div class="about-container">
     <h1>About Me</h1>
     <div class="text-and-photo">
-      <div class="description">
-        I am a self-taught developer, I have been learning for 2 years, I am
-        currently studying at the university, I am passionate about technology,
-        I like to learn new things and I am always looking for new challenges.
-        In my free time I like to play video games, watch movies and series, I
-        also like to read books and learn new things.
-      </div>
+      <div class="description">co mam tu wpisac xD</div>
       <div class="photo">
         <img :src="about2" alt="about" />
       </div>
     </div>
     <div class="text-and-photo reverse">
-      <div class="description">
-        I am a self-taught developer, I have been learning for 2 years, I am
-        currently studying at the university, I am passionate about technology,
-        I like to learn new things and I am always looking for new challenges.
-        In my free time I like to play video games, watch movies and series, I
-        also like to read books and learn new things.
-      </div>
+      <div class="description">Hi</div>
       <div class="photo">
         <img :src="about3" alt="about" />
       </div>
@@ -43,6 +31,7 @@ img {
   object-fit: cover;
 }
 h1 {
+  padding: 20px 0;
   text-align: left;
   font-weight: var(--weight-normal);
   font-size: var(--size-h1);
@@ -52,7 +41,7 @@ h1 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   padding: 20px 20px;
 }
 .text-and-photo {
@@ -68,7 +57,7 @@ h1 {
 }
 .description {
   height: var(--size-quadrant);
-  max-width: calc(var(--size-quadrant) - 40px);
+  width: calc(var(--size-quadrant) - 40px);
   padding: 0 20px;
 
   text-align: justify;
