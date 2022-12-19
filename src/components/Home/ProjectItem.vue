@@ -151,8 +151,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: var(--color-background-layout);
     border-radius: 0 0 10px 10px;
     padding: 20px 0;
   }
