@@ -31,6 +31,26 @@ import mockup3 from "../../assets/mockup3.jpg";
           <p>techbar</p>
         </template>
       </ProjectItem>
+      <ProjectItem>
+        <template #title> Some other app </template>
+        <template #description> Languages learned only with practice </template>
+        <template #iconName> tips_and_updates </template>
+        <template #buttonText> More Info </template>
+        <template #technologies>
+          <p>techbar</p>
+        </template>
+      </ProjectItem>
+      <ProjectItem :background-url="mockup2">
+        <template #title> Quizx - Quiz App </template>
+        <template #description>
+          Project where you can learn by solving single-choice questions.
+        </template>
+        <template #iconName> tips_and_updates </template>
+        <template #buttonText> More Info </template>
+        <template #technologies>
+          <p>techbar</p>
+        </template>
+      </ProjectItem>
     </div>
   </div>
 </template>
