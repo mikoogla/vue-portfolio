@@ -12,9 +12,9 @@ import { onMounted } from "vue";
     <div class="section">
       <div class="title">
         <h1>{{ getCurrentProject.title || "Failed" }}</h1>
-      </div>
-      <div class="description">
-        {{ getCurrentProject.description || "Failed" }}
+        <div class="description">
+          {{ getCurrentProject.description || "Failed" }}
+        </div>
       </div>
 
       <div class="button-container">
@@ -87,6 +87,13 @@ h1 {
   justify-content: center;
   align-items: left;
 }
+.description {
+  max-width: 300px;
+  text-align: left;
+  font-size: var(--size-font-large);
+  font-weight: var(--weight-light);
+  overflow: hidden;
+}
 .section {
   background-color: var(--color-background-layout);
   height: 100%;
@@ -112,7 +119,6 @@ h1 {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  /* background-image: url("../../assets/background.png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

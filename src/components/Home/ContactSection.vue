@@ -83,6 +83,9 @@ export default {
     this.setContactPosition(this.$refs.position.offsetTop || 0);
     window.addEventListener("resize", this.setPosition);
   },
+  unmounted() {
+    window.removeEventListener("resize", this.setPosition);
+  },
   components: { Button },
 };
 </script>

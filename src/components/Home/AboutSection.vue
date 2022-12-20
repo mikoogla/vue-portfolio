@@ -34,6 +34,9 @@ export default {
     this.setAboutPosition(this.$refs.position.offsetTop || 0);
     window.addEventListener("resize", this.setPosition);
   },
+  unmounted() {
+    window.removeEventListener("resize", this.setPosition);
+  },
 };
 </script>
 

@@ -55,6 +55,9 @@ export default {
       "getProjectsPosition",
     ]),
   },
+  unmounted() {
+    window.removeEventListener("resize", this.setPosition);
+  },
 };
 </script>
 
