@@ -123,6 +123,7 @@ h1 {
     width: 100%;
     min-width: 0;
     overflow: hidden;
+    backdrop-filter: blur(1px);
   }
 }
 @media (max-height: 600px) and (min-width: 560px) {
