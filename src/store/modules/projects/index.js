@@ -2,6 +2,10 @@ import actions from "./actions.js";
 import getters from "./getters.js";
 import mutations from "./mutations.js";
 
+import mockup2 from "../../../assets/mockup2.png";
+import mockup3 from "../../../assets/mockup3.jpg";
+import defaultmockup from "../../../assets/default.png";
+
 export default {
   namespaced: false,
   state() {
@@ -16,7 +20,7 @@ export default {
           techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
           siteLink: "https://quiz.mikoogla.me/",
           sourceCodeLink: "https://github.com/mikoogla/vue-quiz-project",
-          background: "/src/assets/mockup2.png",
+          background: mockup2,
         },
         {
           id: 2,
@@ -26,7 +30,7 @@ export default {
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://language.mikoogla.me/",
           sourceCodeLink: "https://github.com/mikoogla/LearningLanguagesApp",
-          background: "/src/assets/mockup3.jpg",
+          background: mockup3,
         },
         {
           id: 3,
@@ -36,7 +40,7 @@ export default {
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://mikoogla.me/",
           sourceCodeLink: "https://github.com/mikoogla",
-          background: "/src/assets/default.png",
+          background: defaultmockup,
         },
         {
           id: 4,
@@ -46,7 +50,7 @@ export default {
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://mikoogla.me/",
           sourceCodeLink: "https://github.com/mikoogla",
-          background: "/src/assets/default.png",
+          background: defaultmockup,
         },
       ],
     };
