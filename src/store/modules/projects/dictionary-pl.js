@@ -41,14 +41,16 @@ const texts = {
     languagePrompt: "EN version",
   },
   heroSection: {
-    title: "Opis stronki jeszcze nie jest gotowy",
+    title: "Projekt i wykonanie z pasją",
     workButton: "Moje projekty",
     contactButton: "Skontaktuj się",
   },
   aboutSection: {
-    title: "O mnie",
-    text1: "Witam państwa na mojej stronie",
-    text2: "Coś tam dalej",
+    title: "O Mnie",
+    text1:
+      "Cześć, nazywam się Mikołaj, jestem studentem 3 roku informatyki na Politechnice Łódzkiej. Moim celem jest tworzenie aplikacji, które dostarczają użytkownikom rozwiązań najlepszej jakości. Aplikacje webowe są do tego najlepszym narzędziem.",
+    text2:
+      "W tym portfolio chciałbym zaprezentować Ci moje najnowsze projekty. Zapraszam też do kontaktu. Na dole strony znajdziesz formularz.",
   },
   projectsSection: {
     title: "Moje projekty",

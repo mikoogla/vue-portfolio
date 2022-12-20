@@ -42,14 +42,16 @@ const texts = {
     languagePrompt: "PL version",
   },
   heroSection: {
-    title: "Outspoken Front end design",
+    title: "Outspoken Front-end design",
     workButton: "See My Work",
     contactButton: "Contact Me",
   },
   aboutSection: {
     title: "About Me",
-    text1: "Text 1 about me",
-    text2: "Text 2 about me",
+    text1:
+      "Hi, I'm Mikolaj. I'm a 3rd year student of CS at the Technical University of Lodz. My goal is to create apps that deliver the best solutions for the users and clients. Web apps are the best tool for that in my opinion. ",
+    text2:
+      "In this portfolio I would like to show you my most recent projects. Also, feel free to contact me via the form below.",
   },
   projectsSection: {
     title: "My Projects",

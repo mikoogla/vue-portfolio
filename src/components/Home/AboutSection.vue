@@ -1,6 +1,6 @@
 <script setup>
-import about2 from "../../assets/about2.png";
-import about3 from "../../assets/about3.png";
+import about2 from "../../assets/photo.jpg";
+import about3 from "../../assets/about2.png";
 import { mapActions, mapGetters } from "vuex";
 </script>
 
@@ -81,7 +81,7 @@ h1 {
   height: var(--size-quadrant);
   width: calc(var(--size-quadrant) - 40px);
   padding: 0 20px;
-
+  line-height: 2rem;
   text-align: justify;
   display: flex;
   flex-direction: column;

@@ -83,5 +83,8 @@ h1 {
   .project-container {
     padding: 0;
   }
+  h1 {
+    padding-left: 20px;
+  }
 }
 </style>
