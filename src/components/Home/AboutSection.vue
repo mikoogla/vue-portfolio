@@ -1,10 +1,11 @@
 <script setup>
 import about2 from "../../assets/about2.png";
 import about3 from "../../assets/about3.png";
+import { mapActions } from "vuex";
 </script>
 
 <template>
-  <div class="about-container">
+  <div class="about-container" ref="position">
     <h1>About Me</h1>
     <div class="text-and-photo">
       <div class="description">co mam tu wpisac xD</div>
@@ -21,7 +22,16 @@ import about3 from "../../assets/about3.png";
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    ...mapActions(["setAboutPosition"]),
+  },
+  mounted() {
+    this.setAboutPosition(this.$refs.position.offsetTop || 0);
+  },
+};
+</script>
 
 <style scoped>
 img {

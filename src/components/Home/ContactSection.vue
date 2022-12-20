@@ -2,10 +2,11 @@
 import Card from "../../UI/Card.vue";
 import axios from "axios";
 import Button from "../../UI/Button.vue";
+import { mapActions } from "vuex";
 </script>
 
 <template>
-  <div class="contact-container">
+  <div class="contact-container" ref="position">
     <h1>Contact Me</h1>
     <Card class="card">
       <form class="form" @submit.prevent="onSubmit">
@@ -55,6 +56,7 @@ export default {
     };
   },
   methods: {
+    ...mapActions(["setContactPosition"]),
     onSubmit() {
       console.log("submit");
       //send webhook
@@ -74,7 +76,9 @@ export default {
       }, 5000);
     },
   },
-
+  mounted() {
+    this.setContactPosition(this.$refs.position.offsetTop || 0);
+  },
   components: { Button },
 };
 </script>

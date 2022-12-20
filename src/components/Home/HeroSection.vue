@@ -1,5 +1,6 @@
 <script setup>
 import Button from "../../UI/Button.vue";
+import { mapGetters } from "vuex";
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import Button from "../../UI/Button.vue";
           </template>
           <template #text>See My Work</template>
         </Button>
-        <Button @click="scrollBottom">
+        <Button @click="scrollToContact">
           <template #icon>
             <span class="material-symbols-outlined"> email </span>
           </template>
@@ -30,21 +31,31 @@ import Button from "../../UI/Button.vue";
 <script>
 export default {
   name: "HeroSection",
+  components: {
+    Button,
+  },
   methods: {
     scrollToProjects() {
+      console.log("posotion:" + this.getProjectsPosition);
       window.scrollTo({
-        top: document.body.scrollHeight - 2 * window.innerHeight - 16 * 4,
+        top: this.getProjectsPosition,
         behavior: "smooth",
       });
     },
-    scrollBottom() {
+    scrollToContact() {
       console.log(document.body.scrollHeight);
       window.scrollTo({
-        top: document.body.scrollHeight - window.innerHeight - 16 * 4,
-        //16*4 = 4rem which is footer height
+        top: this.getContactPosition,
         behavior: "smooth",
       });
     },
+  },
+  computed: {
+    ...mapGetters([
+      "getAboutPosition",
+      "getContactPosition",
+      "getProjectsPosition",
+    ]),
   },
 };
 </script>

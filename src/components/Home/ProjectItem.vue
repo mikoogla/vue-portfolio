@@ -69,9 +69,6 @@ export default {
       default: defaultimage,
     },
   },
-  mounted() {
-    console.log("url: " + this.backgroundUrl);
-  },
   methods: {
     goToProject() {
       this.$router.push("/project");

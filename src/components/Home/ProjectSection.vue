@@ -2,6 +2,7 @@
 import ProjectItem from "./ProjectItem.vue";
 import mockup2 from "../../assets/mockup2.png";
 import mockup3 from "../../assets/mockup3.jpg";
+import { mapActions } from "vuex";
 </script>
 
 <template>
@@ -58,8 +59,11 @@ export default {
   components: {
     ProjectItem,
   },
+  methods: {
+    ...mapActions(["setProjectsPosition"]),
+  },
   mounted() {
-    console.log("top: " + this.$refs.position.offsetTop);
+    this.setProjectsPosition(this.$refs.position.offsetTop || 0);
   },
 };
 </script>

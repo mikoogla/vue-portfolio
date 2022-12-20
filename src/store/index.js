@@ -8,12 +8,10 @@ import positionModule from "./modules/position/index.js";
 
 const store = createStore({
   modules: {
-    position: positionModule,
+    positionModule: positionModule,
   },
   state() {
-    return {
-      count: 0,
-    };
+    return {};
   },
   mutations: mutations,
   actions: actions,

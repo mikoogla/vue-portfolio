@@ -3,11 +3,12 @@ import getters from "./getters.js";
 import mutations from "./mutations.js";
 
 export default {
-  namespaced: true,
+  namespaced: false,
   state() {
     return {
-      tests: [],
-      selectedTest: "",
+      aboutPosition: 0,
+      projectsPosition: 0,
+      contactPosition: 0,
     };
   },
   mutations: mutations,
