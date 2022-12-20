@@ -2,30 +2,39 @@
 import Card from "../../UI/Card.vue";
 import axios from "axios";
 import Button from "../../UI/Button.vue";
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 </script>
 
 <template>
   <div class="contact-container" ref="position">
-    <h1>Contact Me</h1>
+    <h1>{{ text.contactSection.title }}</h1>
     <Card class="card">
       <form class="form" @submit.prevent="onSubmit">
         <div class="email">
-          <label for="email">Your Email</label>
-          <input type="email" v-model="email" placeholder="email" />
+          <label for="email">{{ text.contactSection.emailLabel }}</label>
+          <input
+            type="email"
+            v-model="email"
+            :placeholder="text.contactSection.emailHolder"
+          />
         </div>
         <div class="message">
-          <label for="message">Message</label>
+          <label for="message">{{ text.contactSection.messageLabel }}</label>
           <textarea
             required
             type="text"
             v-model="message"
-            placeholder="message"
+            :placeholder="text.contactSection.messageHolder"
           />
         </div>
         <div class="name">
-          <label for="name">Your Name</label>
-          <input required type="text" v-model="name" placeholder="name" />
+          <label for="name">{{ text.contactSection.nameLabel }}</label>
+          <input
+            required
+            type="text"
+            v-model="name"
+            :placeholder="text.contactSection.nameHolder"
+          />
         </div>
 
         <div class="button-container">
@@ -33,7 +42,7 @@ import { mapActions } from "vuex";
             <template #icon>
               <span class="material-symbols-outlined"> email </span>
             </template>
-            <template #text>Submit</template>
+            <template #text>{{ text.contactSection.submitButton }}</template>
           </Button>
         </div>
       </form>
@@ -87,6 +96,11 @@ export default {
     window.removeEventListener("resize", this.setPosition);
   },
   components: { Button },
+  computed: {
+    ...mapGetters({
+      text: "getTexts",
+    }),
+  },
 };
 </script>
 

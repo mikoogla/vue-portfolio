@@ -9,4 +9,7 @@ export default {
   getCurrentProject(state) {
     return state.currentProject;
   },
+  getTexts(state) {
+    return state.texts;
+  },
 };

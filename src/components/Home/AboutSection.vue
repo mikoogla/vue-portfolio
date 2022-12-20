@@ -1,20 +1,20 @@
 <script setup>
 import about2 from "../../assets/about2.png";
 import about3 from "../../assets/about3.png";
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 </script>
 
 <template>
   <div class="about-container" ref="position">
-    <h1>About Me</h1>
+    <h1>{{ text.aboutSection.title }}</h1>
     <div class="text-and-photo">
-      <div class="description">co mam tu wpisac xD</div>
+      <div class="description">{{ text.aboutSection.text1 }}</div>
       <div class="photo">
         <img :src="about2" alt="about" />
       </div>
     </div>
     <div class="text-and-photo reverse">
-      <div class="description">Hi</div>
+      <div class="description">{{ text.aboutSection.text2 }}</div>
       <div class="photo">
         <img :src="about3" alt="about" />
       </div>
@@ -24,6 +24,11 @@ import { mapActions } from "vuex";
 
 <script>
 export default {
+  computed: {
+    ...mapGetters({
+      text: "getTexts",
+    }),
+  },
   methods: {
     ...mapActions(["setAboutPosition"]),
     setPosition() {

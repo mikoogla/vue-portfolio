@@ -22,7 +22,7 @@ import { mapActions } from "vuex";
             <template #icon>
               <span class="material-symbols-outlined"> tips_and_updates </span>
             </template>
-            <template #text> More Info </template>
+            <template #text> {{ buttonText }} </template>
           </Button>
         </div>
       </div>
@@ -44,7 +44,7 @@ import { mapActions } from "vuex";
             >
           </template>
           <template #text>
-            <slot name="buttonText"> More Info </slot>
+            <slot name="buttonText"> {{ buttonText }} </slot>
           </template>
         </Button>
       </div>
@@ -58,6 +58,10 @@ export default {
     project: {
       type: Object,
       default: () => ({}),
+    },
+    buttonText: {
+      type: String,
+      default: "More Info",
     },
   },
   methods: {

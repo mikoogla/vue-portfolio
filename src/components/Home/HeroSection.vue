@@ -7,7 +7,7 @@ import { mapGetters } from "vuex";
   <div class="home-container">
     <div class="section">
       <div class="title">
-        <h1>OUTSPOKEN FRONT END DESIGN</h1>
+        <h1>{{ text.heroSection.title.toUpperCase() }}</h1>
       </div>
 
       <div class="button-container">
@@ -15,13 +15,13 @@ import { mapGetters } from "vuex";
           <template #icon>
             <span class="material-symbols-outlined"> code </span>
           </template>
-          <template #text>See My Work</template>
+          <template #text>{{ text.heroSection.workButton }}</template>
         </Button>
         <Button @click="scrollToContact">
           <template #icon>
             <span class="material-symbols-outlined"> email </span>
           </template>
-          <template #text>Contact Me</template>
+          <template #text>{{ text.heroSection.contactButton }}</template>
         </Button>
       </div>
     </div>
@@ -54,6 +54,9 @@ export default {
       "getContactPosition",
       "getProjectsPosition",
     ]),
+    ...mapGetters({
+      text: "getTexts",
+    }),
   },
   unmounted() {
     window.removeEventListener("resize", this.setPosition);

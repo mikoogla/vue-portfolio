@@ -5,13 +5,14 @@ import { mapActions, mapGetters } from "vuex";
 
 <template>
   <div class="home-container" ref="position">
-    <h1>MY PROJECTS</h1>
+    <h1>{{ text.projectsSection.title }}</h1>
 
     <div class="cards-container">
       <ProjectItem
         v-for="project in getProjects"
         :key="project.id"
         :project="project"
+        :buttonText="text.projectsSection.buttonText"
       >
       </ProjectItem>
     </div>
@@ -36,6 +37,9 @@ export default {
   },
   computed: {
     ...mapGetters(["getProjects"]),
+    ...mapGetters({
+      text: "getTexts",
+    }),
   },
   mounted() {
     this.setProjectsPosition(this.$refs.position.offsetTop || 0);

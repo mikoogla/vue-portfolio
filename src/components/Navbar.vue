@@ -6,10 +6,15 @@
     />
     <RouterLink to="/"> <div class="logo">Mikoogla</div></RouterLink>
     <div class="navigation">
-      <RouterLink class="mobile-off navtext" to="/">Home</RouterLink>
-      <RouterLink class="mobile-off navtext" to="/contact">Contact</RouterLink>
-      <div @click="languageChange" class="language mobile-off navtext">
-        ENG<span class="material-symbols-outlined"> translate </span>
+      <RouterLink class="mobile-off navtext" to="/">{{
+        text.navbar.home
+      }}</RouterLink>
+      <RouterLink class="mobile-off navtext" to="/contact">{{
+        text.navbar.contact
+      }}</RouterLink>
+      <div @click="switchLanguage" class="language mobile-off navtext">
+        {{ text.navbar.language
+        }}<span class="material-symbols-outlined"> translate </span>
       </div>
       <span @click="showMenu" class="material-symbols-outlined mobile-on">
         {{ menuIcon }}
@@ -20,11 +25,19 @@
 
 <script setup>
 import MobileMenu from "./MobileMenu.vue";
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
+function switchLanguage() {
+  store.dispatch("switchLanguage");
+}
 
 const isMenuVisible = ref(false);
 const menuIcon = ref("menu");
 
+const text = computed(() => {
+  return store.getters.getTexts;
+});
 watch(isMenuVisible, (value) => {
   if (value) {
     menuIcon.value = "close";
@@ -34,9 +47,6 @@ watch(isMenuVisible, (value) => {
 });
 function showMenu() {
   isMenuVisible.value = !isMenuVisible.value;
-}
-function languageChange() {
-  alert("changing Language");
 }
 </script>
 
