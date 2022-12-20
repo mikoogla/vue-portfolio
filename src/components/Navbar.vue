@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-container">
     <MobileMenu
-      :style="{ display: isMenuVisible ? 'none' : '' }"
+      :style="{ display: isMenuVisible ? '' : 'none' }"
       @click="showMenu"
     />
     <RouterLink to="/"> <div class="logo">Mikoogla</div></RouterLink>
@@ -12,7 +12,7 @@
         ENG<span class="material-symbols-outlined"> translate </span>
       </div>
       <span @click="showMenu" class="material-symbols-outlined mobile-on">
-        menu
+        {{ menuIcon }}
       </span>
     </div>
   </div>
@@ -20,10 +20,18 @@
 
 <script setup>
 import MobileMenu from "./MobileMenu.vue";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const isMenuVisible = ref(false);
+const menuIcon = ref("menu");
 
+watch(isMenuVisible, (value) => {
+  if (value) {
+    menuIcon.value = "close";
+  } else {
+    menuIcon.value = "menu";
+  }
+});
 function showMenu() {
   isMenuVisible.value = !isMenuVisible.value;
 }
