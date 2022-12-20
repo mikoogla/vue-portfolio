@@ -107,7 +107,6 @@ export default {
 <style scoped>
 input,
 textarea {
-  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: none;
@@ -134,7 +133,7 @@ h1 {
   overflow: hidden;
 }
 .button-container {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -145,10 +144,12 @@ h1 {
   justify-content: center;
 }
 .email,
-.message {
+.message,
+.name {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
 }
 .contact-container {
   font-size: var(--size-font-medium);
@@ -168,11 +169,11 @@ h1 {
 }
 .form {
   padding: 20px;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   gap: 50px;
 }
 
@@ -209,7 +210,8 @@ h1 {
     width: 80%;
   }
   .button-container {
-    width: 80%;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
