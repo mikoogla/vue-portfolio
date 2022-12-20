@@ -75,9 +75,13 @@ export default {
         this.successMessage = false;
       }, 5000);
     },
+    setPosition() {
+      this.setContactPosition(this.$refs.position.offsetTop || 0);
+    },
   },
   mounted() {
     this.setContactPosition(this.$refs.position.offsetTop || 0);
+    window.addEventListener("resize", this.setPosition);
   },
   components: { Button },
 };

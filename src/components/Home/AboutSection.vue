@@ -26,9 +26,13 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     ...mapActions(["setAboutPosition"]),
+    setPosition() {
+      this.setAboutPosition(this.$refs.position.offsetTop || 0);
+    },
   },
   mounted() {
     this.setAboutPosition(this.$refs.position.offsetTop || 0);
+    window.addEventListener("resize", this.setPosition);
   },
 };
 </script>

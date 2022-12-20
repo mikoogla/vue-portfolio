@@ -4,6 +4,10 @@ import Project from "../views/Project.vue";
 import Contact from "../views/Contact.vue";
 
 const router = createRouter({
+  scrollBehavior(_, _, _) {
+    return { top: 0 };
+  },
+
   history: createWebHistory(),
   routes: [
     {

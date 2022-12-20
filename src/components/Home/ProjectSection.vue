@@ -30,17 +30,26 @@ import { mapActions, mapGetters } from "vuex";
 
 <script>
 export default {
+  data() {
+    return {
+      position: 0,
+    };
+  },
   components: {
     ProjectItem,
   },
   methods: {
     ...mapActions(["setProjectsPosition"]),
+    setPosition() {
+      this.setProjectsPosition(this.$refs.position.offsetTop || 0);
+    },
   },
   computed: {
     ...mapGetters(["getProjects"]),
   },
   mounted() {
     this.setProjectsPosition(this.$refs.position.offsetTop || 0);
+    window.addEventListener("resize", this.setPosition);
   },
 };
 </script>
