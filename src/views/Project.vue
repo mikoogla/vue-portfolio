@@ -6,28 +6,50 @@ import Button from "../UI/Button.vue";
   <div class="project-container">
     <div class="section">
       <div class="title">
-        <h1>OUTSPOKEN FRONT END DESIGN</h1>
+        <h1>{{ project.title }}</h1>
       </div>
 
       <div class="button-container">
         <Button>
           <template #icon>
-            <span class="material-symbols-outlined"> code </span>
+            <span class="material-symbols-outlined"> link </span>
           </template>
-          <template #text>See My Work</template>
+          <template #text>Visit Site</template>
         </Button>
         <Button>
           <template #icon>
-            <span class="material-symbols-outlined"> email </span>
+            <span class="material-symbols-outlined"> code </span>
           </template>
-          <template #text>Contact Me</template>
+          <template #text>Source Code</template>
         </Button>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "Project",
+  components: {
+    Button,
+  },
+  data() {
+    return {
+      id: this.$route.params.id,
+      project: {
+        title: "default title",
+        description: "default description",
+        techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
+        siteLink: "#",
+        sourceCodeLink: "#",
+      },
+    };
+  },
+  mounted() {
+    console.log("router path id: " + this.$route.params.id);
+  },
+};
+</script>
 
 <style scoped>
 h1 {

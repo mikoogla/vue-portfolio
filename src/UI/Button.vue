@@ -30,7 +30,8 @@
   width: var(--width-button);
   border-radius: 5px;
 }
-.btn-main:hover {
+.btn-main:hover,
+.btn-main:focus {
   background-color: var(--color-accent-1);
   color: var(--color-text-button-hover);
 }

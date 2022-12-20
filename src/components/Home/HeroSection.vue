@@ -36,14 +36,12 @@ export default {
   },
   methods: {
     scrollToProjects() {
-      console.log("posotion:" + this.getProjectsPosition);
       window.scrollTo({
         top: this.getProjectsPosition,
         behavior: "smooth",
       });
     },
     scrollToContact() {
-      console.log(document.body.scrollHeight);
       window.scrollTo({
         top: this.getContactPosition,
         behavior: "smooth",

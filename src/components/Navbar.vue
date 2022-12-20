@@ -24,6 +24,12 @@ function languageChange() {
 </script>
 
 <style scoped>
+a.router-link-exact-active {
+  color: var(--color-accent-2);
+  /* underline */
+  border-bottom: 1px solid var(--color-accent-2);
+  transition: all 0.3s ease-in-out;
+}
 .navtext {
   font-size: var(--size-font-medium);
 }

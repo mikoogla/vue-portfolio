@@ -13,8 +13,14 @@ const router = createRouter({
     },
     {
       path: "/project",
-      name: "about",
+      name: "project",
       component: Project,
+    },
+    {
+      path: "/project/:id",
+      name: "project",
+      component: Project,
+      props: true,
     },
     {
       path: "/contact",

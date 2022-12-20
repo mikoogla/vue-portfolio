@@ -1,48 +1,21 @@
 <script setup>
 import ProjectItem from "./ProjectItem.vue";
-import mockup2 from "../../assets/mockup2.png";
-import mockup3 from "../../assets/mockup3.jpg";
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 </script>
 
 <template>
   <div class="home-container" ref="position">
     <h1>MY PROJECTS</h1>
-    <div class="cards-container">
-      <ProjectItem :background-url="mockup2">
-        <template #title> Quizx - Quiz App </template>
-        <template #description>
-          Project where you can learn by solving single-choice questions.
-        </template>
-        <template #iconName> tips_and_updates </template>
-        <template #buttonText> More Info </template>
-        <template #technologies>
-          <p>techbar</p>
-        </template>
-      </ProjectItem>
 
-      <ProjectItem :background-url="mockup3">
-        <template #title> Learning Languages App </template>
-        <template #description> Languages learned only with practice </template>
-        <template #iconName> tips_and_updates </template>
-        <template #buttonText> More Info </template>
-        <template #technologies>
-          <p>techbar</p>
-        </template>
-      </ProjectItem>
-      <ProjectItem>
-        <template #title> Some other app </template>
-        <template #description> Languages learned only with practice </template>
-        <template #iconName> tips_and_updates </template>
-        <template #buttonText> More Info </template>
-        <template #technologies>
-          <p>techbar</p>
-        </template>
-      </ProjectItem>
-      <ProjectItem :background-url="mockup2">
-        <template #title> Quizx - Quiz App </template>
+    <div class="cards-container">
+      <ProjectItem
+        v-for="project in getProjects"
+        :background-url="project.background"
+        :project-name="project.name"
+      >
+        <template #title> {{ project.title }}</template>
         <template #description>
-          Project where you can learn by solving single-choice questions.
+          {{ project.description }}
         </template>
         <template #iconName> tips_and_updates </template>
         <template #buttonText> More Info </template>
@@ -61,6 +34,9 @@ export default {
   },
   methods: {
     ...mapActions(["setProjectsPosition"]),
+  },
+  computed: {
+    ...mapGetters(["getProjects"]),
   },
   mounted() {
     this.setProjectsPosition(this.$refs.position.offsetTop || 0);

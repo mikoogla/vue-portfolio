@@ -68,10 +68,14 @@ export default {
       type: String,
       default: defaultimage,
     },
+    projectName: {
+      type: String,
+      default: "",
+    },
   },
   methods: {
     goToProject() {
-      this.$router.push("/project");
+      this.$router.push("/project/" + this.projectName);
     },
   },
 };
