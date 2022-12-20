@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-container">
-    <div class="logo">Mikoogla</div>
+    <RouterLink to="/"> <div class="logo">Mikoogla</div></RouterLink>
     <div class="navigation">
       <RouterLink class="mobile-off navtext" to="/">Home</RouterLink>
       <RouterLink class="mobile-off navtext" to="/contact">Contact</RouterLink>
@@ -24,7 +24,7 @@ function languageChange() {
 </script>
 
 <style scoped>
-a.router-link-exact-active {
+a.router-link-exact-active.navtext {
   color: var(--color-accent-2);
   /* underline */
   border-bottom: 1px solid var(--color-accent-2);
@@ -44,6 +44,7 @@ a.router-link-exact-active {
 
 .logo {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .navigation {
   width: 50%;
