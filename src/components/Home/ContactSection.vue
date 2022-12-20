@@ -214,4 +214,15 @@ h1 {
     align-items: center;
   }
 }
+@media (max-width: 560px) {
+  .email,
+  .message,
+  .name {
+    width: 100%;
+  }
+  .button-container,
+  .button {
+    width: 100%;
+  }
+}
 </style>
