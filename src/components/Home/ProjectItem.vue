@@ -2,6 +2,7 @@
 import Card from "../../UI/Card.vue";
 import Button from "../../UI/Button.vue";
 import { mapActions } from "vuex";
+import TechBar from "./techbar/TechBar.vue";
 </script>
 
 <template>
@@ -30,9 +31,7 @@ import { mapActions } from "vuex";
         :style="{ backgroundImage: `url(&quot;${project.background}&quot;)` }"
       >
         <div class="technologies">
-          <slot name="technologies">
-            <p>techbar</p>
-          </slot>
+          <TechBar :technologies="project.techStack" />
         </div>
       </div>
       <div class="mobile-button">
@@ -71,6 +70,7 @@ export default {
     },
     ...mapActions(["setCurrentProject"]),
   },
+  components: { TechBar },
 };
 </script>
 
@@ -112,7 +112,7 @@ export default {
   gap: 20px;
 }
 .technologies {
-  padding: 0 20px;
+  padding: 20px;
   border-radius: 0 10px 10px 0;
   height: 100%;
   background-color: var(--color-background-layout);
@@ -144,6 +144,10 @@ export default {
     width: 100%;
     height: var(--size-overlay-height);
     background-color: var(--color-background-layout);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .description,
   .title {
@@ -162,6 +166,11 @@ export default {
   .button-styling-mobile {
     width: 80%;
     justify-content: center;
+  }
+}
+@media (max-width: 300px) {
+  .technologies {
+    display: none;
   }
 }
 </style>

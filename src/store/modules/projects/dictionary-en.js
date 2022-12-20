@@ -7,7 +7,7 @@ const projects = [
     title: "Quizx - Quiz App",
     description:
       "Project where you can learn by solving single-choice questions.",
-    techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
+    techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Axios"],
     siteLink: "https://quiz.mikoogla.me/",
     sourceLink: "https://github.com/mikoogla/vue-quiz-project",
     background: mockup2,
