@@ -16,7 +16,7 @@
 
 <script setup>
 function showMenu() {
-  alert("menu will be here");
+  alert("menu will be heree");
 }
 function languageChange() {
   alert("changing Language");
