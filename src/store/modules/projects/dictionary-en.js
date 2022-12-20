@@ -7,7 +7,7 @@ const projects = [
     title: "Quizx - Quiz App",
     description:
       "Project where you can learn by solving single-choice questions.",
-    techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Axios"],
+    techStack: ["Vue", "Vuex", "Firebase", "Axios"],
     siteLink: "https://quiz.mikoogla.me/",
     sourceLink: "https://github.com/mikoogla/vue-quiz-project",
     background: mockup2,
@@ -17,7 +17,7 @@ const projects = [
     name: "Learning",
     title: "Learning Languages App",
     description: "Languages learned only with practice",
-    techStack: ["React", "Redux", "React Router", "Firebase"],
+    techStack: ["React", "Redux", "Firebase"],
     siteLink: "https://language.mikoogla.me/",
     sourceLink: "https://github.com/mikoogla/LearningLanguagesApp",
     background: mockup3,

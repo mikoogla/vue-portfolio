@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .techbar-container {
-  max-width: 4rem;
+  max-width: 3rem;
   height: 100%;
   display: flex;
   flex-direction: column;

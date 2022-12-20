@@ -6,7 +6,7 @@ const projects = [
     title: "Quizx - Quiz App",
     description:
       "Aplikacja, w której uczysz się poprzez rozwiązywanie testów jednokrotnego wyboru.",
-    techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
+    techStack: ["Vue", "Vuex", "Firebase", "Axios"],
     siteLink: "https://quiz.mikoogla.me/",
     sourceLink: "https://github.com/mikoogla/vue-quiz-project",
     background: mockup2,
@@ -16,7 +16,7 @@ const projects = [
     name: "Learning",
     title: "Learning Languages App",
     description: "Aplikacja do praktycznego uczenia się języków",
-    techStack: ["React", "Redux", "React Router", "Firebase"],
+    techStack: ["React", "Redux", "Firebase"],
     siteLink: "https://language.mikoogla.me/",
     sourceLink: "https://github.com/mikoogla/LearningLanguagesApp",
     background: mockup3,

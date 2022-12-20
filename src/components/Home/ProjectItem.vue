@@ -81,6 +81,7 @@ export default {
 }
 
 .item-container {
+  height: 100%;
   font-size: var(--size-font-medium);
   min-height: 40vh;
   padding: 0 0 0 20px;

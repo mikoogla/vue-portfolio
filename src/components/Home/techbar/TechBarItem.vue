@@ -60,7 +60,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 .description {
   display: flex;
