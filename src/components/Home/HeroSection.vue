@@ -10,13 +10,13 @@ import Button from "../../UI/Button.vue";
       </div>
 
       <div class="button-container">
-        <Button>
+        <Button @click="scrollToProjects">
           <template #icon>
             <span class="material-symbols-outlined"> code </span>
           </template>
           <template #text>See My Work</template>
         </Button>
-        <Button>
+        <Button @click="scrollBottom">
           <template #icon>
             <span class="material-symbols-outlined"> email </span>
           </template>
@@ -27,7 +27,27 @@ import Button from "../../UI/Button.vue";
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "HeroSection",
+  methods: {
+    scrollToProjects() {
+      window.scrollTo({
+        top: document.body.scrollHeight - 2 * window.innerHeight - 16 * 4,
+        behavior: "smooth",
+      });
+    },
+    scrollBottom() {
+      console.log(document.body.scrollHeight);
+      window.scrollTo({
+        top: document.body.scrollHeight - window.innerHeight - 16 * 4,
+        //16*4 = 4rem which is footer height
+        behavior: "smooth",
+      });
+    },
+  },
+};
+</script>
 
 <style scoped>
 h1 {

@@ -23,7 +23,7 @@ import defaultimage from "../../assets/default.png";
           </slot>
         </div>
         <div class="button-container">
-          <Button>
+          <Button @click="goToProject">
             <template #icon>
               <span class="material-symbols-outlined">
                 <slot name="iconName"> tune </slot></span
@@ -46,7 +46,7 @@ import defaultimage from "../../assets/default.png";
         </div>
       </div>
       <div class="mobile-button">
-        <Button class="button-styling-mobile">
+        <Button class="button-styling-mobile" @click="goToProject">
           <template #icon>
             <span class="material-symbols-outlined">
               <slot name="iconName"> tune </slot></span
@@ -71,6 +71,11 @@ export default {
   },
   mounted() {
     console.log("url: " + this.backgroundUrl);
+  },
+  methods: {
+    goToProject() {
+      this.$router.push("/project");
+    },
   },
 };
 </script>
