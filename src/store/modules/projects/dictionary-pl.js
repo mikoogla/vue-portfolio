@@ -55,7 +55,7 @@ const texts = {
     buttonText: "Zobacz więcej",
   },
   contactSection: {
-    title: "Skontaktuj się",
+    title: "Kontakt",
     emailLabel: "Twój email",
     messageLabel: "Twoja wiadomość",
     nameLabel: "Imię",
@@ -63,6 +63,8 @@ const texts = {
     emailHolder: "email",
     messageHolder: "wiadomość",
     nameHolder: "imię",
+    sendPrompt: "Dziękuję za wiadomość",
+    sendPrompt2: "Odpowiem jak najszybciej",
   },
   projectInfo: {
     siteButton: "Odwiedź stronę",

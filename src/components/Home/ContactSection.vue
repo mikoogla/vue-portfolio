@@ -48,8 +48,8 @@ import { mapActions, mapGetters } from "vuex";
       </form>
     </Card>
     <div class="success" :class="{ visible: successMessage }">
-      <p>Thanks for the message!</p>
-      <p>I will reply ASAP</p>
+      <p>{{ text.contactSection.sendPrompt }}</p>
+      <p>{{ text.contactSection.sendPrompt2 }}</p>
     </div>
   </div>
 </template>

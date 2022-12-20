@@ -64,6 +64,8 @@ const texts = {
     emailHolder: "email",
     messageHolder: "message",
     nameHolder: "name",
+    sendPrompt: "Thanks for the message!",
+    sendPrompt2: "I will reply ASAP",
   },
   projectInfo: {
     siteButton: "Visit Site",
