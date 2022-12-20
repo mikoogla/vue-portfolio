@@ -4,7 +4,7 @@ import Project from "../views/Project.vue";
 import Contact from "../views/Contact.vue";
 
 const router = createRouter({
-  scrollBehavior(_, _, _) {
+  scrollBehavior() {
     return { top: 0 };
   },
 
