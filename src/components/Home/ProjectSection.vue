@@ -5,7 +5,7 @@ import mockup3 from "../../assets/mockup3.jpg";
 </script>
 
 <template>
-  <div class="home-container">
+  <div class="home-container" ref="position">
     <h1>MY PROJECTS</h1>
     <div class="cards-container">
       <ProjectItem :background-url="mockup2">
@@ -53,7 +53,16 @@ import mockup3 from "../../assets/mockup3.jpg";
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  components: {
+    ProjectItem,
+  },
+  mounted() {
+    console.log("top: " + this.$refs.position.offsetTop);
+  },
+};
+</script>
 
 <style scoped>
 h1 {

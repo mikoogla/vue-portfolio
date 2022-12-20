@@ -11,6 +11,16 @@ import ProjectSection from "../components/Home/ProjectSection.vue";
   <ProjectSection />
   <ContactSection />
 </template>
-<script></script>
+<script>
+export default {
+  name: "Home",
+  components: {
+    AboutSection,
+    ContactSection,
+    HeroSection,
+    ProjectSection,
+  },
+};
+</script>
 
 <style scoped></style>
