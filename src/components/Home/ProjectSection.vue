@@ -10,6 +10,7 @@ import { mapActions, mapGetters } from "vuex";
     <div class="cards-container">
       <ProjectItem
         v-for="project in getProjects"
+        :key="project.id"
         :background-url="project.background"
         :project-name="project.name"
       >

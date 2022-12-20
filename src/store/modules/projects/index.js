@@ -38,6 +38,16 @@ export default {
           sourceCodeLink: "https://github.com/mikoogla",
           background: "/src/assets/default.png",
         },
+        {
+          id: 4,
+          name: "Some",
+          title: "Some other app",
+          description: "some description about this app",
+          techStack: ["React", "Redux", "React Router", "Firebase"],
+          siteLink: "https://mikoogla.me/",
+          sourceCodeLink: "https://github.com/mikoogla",
+          background: "/src/assets/default.png",
+        },
       ],
     };
   },
