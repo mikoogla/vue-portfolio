@@ -1,7 +1,6 @@
 <script setup>
 import Card from "../../UI/Card.vue";
 import Button from "../../UI/Button.vue";
-import defaultimage from "../../assets/default.png";
 import { mapActions } from "vuex";
 </script>
 
