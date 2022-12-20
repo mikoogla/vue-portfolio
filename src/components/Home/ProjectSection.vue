@@ -4,7 +4,7 @@ import { mapActions, mapGetters } from "vuex";
 </script>
 
 <template>
-  <div class="home-container" ref="position">
+  <div class="project-container" ref="position">
     <h1>{{ text.projectsSection.title }}</h1>
 
     <div class="cards-container">
@@ -55,7 +55,7 @@ h1 {
   font-size: var(--size-h1);
   overflow: hidden;
 }
-.home-container {
+.project-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,6 +77,11 @@ h1 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 3rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .project-container {
+    padding: 0;
   }
 }
 </style>
