@@ -38,6 +38,7 @@ const texts = {
     home: "Strona główna",
     contact: "Kontakt",
     language: "PL",
+    languagePrompt: "EN version",
   },
   heroSection: {
     title: "Opis stronki jeszcze nie jest gotowy",

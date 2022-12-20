@@ -6,6 +6,9 @@
     <RouterLink to="/contact">
       <div>{{ text.navbar.contact }}</div></RouterLink
     >
+    <div @click="switchLanguage" class="language">
+      {{ text.navbar.languagePrompt }}
+    </div>
   </div>
 </template>
 <script>
@@ -16,6 +19,11 @@ export default {
     ...mapGetters({
       text: "getTexts",
     }),
+  },
+  methods: {
+    switchLanguage() {
+      this.$store.dispatch("switchLanguage");
+    },
   },
 };
 </script>
@@ -33,7 +41,14 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: end;
   font-size: var(--size-font-xl);
+  gap: 20px;
+}
+.language {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 a.router-link-exact-active {

@@ -39,6 +39,7 @@ const texts = {
     home: "Home",
     contact: "Contact",
     language: "ENG",
+    languagePrompt: "PL version",
   },
   heroSection: {
     title: "Outspoken Front end design",
