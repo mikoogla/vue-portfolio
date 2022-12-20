@@ -8,13 +8,21 @@ import { mapActions, mapGetters } from "vuex";
   <div class="about-container" ref="position">
     <h1>{{ text.aboutSection.title }}</h1>
     <div class="text-and-photo">
-      <div class="description">{{ text.aboutSection.text1 }}</div>
+      <div class="description">
+        <div class="text">
+          {{ text.aboutSection.text1 }}
+        </div>
+      </div>
       <div class="photo">
         <img :src="about2" alt="about" />
       </div>
     </div>
     <div class="text-and-photo reverse">
-      <div class="description">{{ text.aboutSection.text2 }}</div>
+      <div class="description">
+        <div class="text">
+          {{ text.aboutSection.text2 }}
+        </div>
+      </div>
       <div class="photo">
         <img :src="about3" alt="about" />
       </div>
@@ -73,14 +81,18 @@ h1 {
   align-items: center;
   max-width: 100%;
   overflow: hidden;
+  backdrop-filter: brightness(0.8);
+}
+.text {
+  padding: 50px;
 }
 .reverse {
   flex-direction: row-reverse;
 }
 .description {
   height: var(--size-quadrant);
-  width: calc(var(--size-quadrant) - 40px);
-  padding: 0 20px;
+
+  max-width: 500px;
   line-height: 2rem;
   text-align: justify;
   display: flex;
@@ -103,6 +115,9 @@ h1 {
   }
   .description {
     height: calc(var(--size-quadrant) / 1.5);
+  }
+  .text {
+    padding: 20px;
   }
 }
 </style>
