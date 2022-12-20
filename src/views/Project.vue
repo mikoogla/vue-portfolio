@@ -1,7 +1,6 @@
 <script setup>
 import Button from "../UI/Button.vue";
 import { mapGetters } from "vuex";
-import { onMounted } from "vue";
 </script>
 
 <template>
@@ -22,13 +21,13 @@ import { onMounted } from "vue";
           <template #icon>
             <span class="material-symbols-outlined"> link </span>
           </template>
-          <template #text>Visit Site</template>
+          <template #text>{{ text.projectInfo.siteButton }}</template>
         </Button>
         <Button @click="openSource">
           <template #icon>
             <span class="material-symbols-outlined"> code </span>
           </template>
-          <template #text>Source Code</template>
+          <template #text>{{ text.projectInfo.sourceButton }}</template>
         </Button>
       </div>
     </div>
@@ -67,6 +66,9 @@ export default {
   },
   computed: {
     ...mapGetters(["getCurrentProject", "getProjectByName"]),
+    ...mapGetters({
+      text: "getTexts",
+    }),
   },
 };
 </script>

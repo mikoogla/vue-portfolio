@@ -1,10 +1,24 @@
 <template>
   <div class="mobile-menu">
-    <RouterLink to="/"> <div>Home</div></RouterLink>
-    <RouterLink to="/contact"> <div>Contact</div></RouterLink>
+    <RouterLink to="/">
+      <div>{{ text.navbar.home }}</div></RouterLink
+    >
+    <RouterLink to="/contact">
+      <div>{{ text.navbar.contact }}</div></RouterLink
+    >
   </div>
 </template>
-
+<script>
+import { mapGetters } from "vuex";
+export default {
+  name: "MobileMenu",
+  computed: {
+    ...mapGetters({
+      text: "getTexts",
+    }),
+  },
+};
+</script>
 <style scoped>
 .mobile-menu {
   position: fixed;
