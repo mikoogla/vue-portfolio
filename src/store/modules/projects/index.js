@@ -19,7 +19,7 @@ export default {
             "Project where you can learn by solving single-choice questions.",
           techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
           siteLink: "https://quiz.mikoogla.me/",
-          sourceCodeLink: "https://github.com/mikoogla/vue-quiz-project",
+          sourceLink: "https://github.com/mikoogla/vue-quiz-project",
           background: mockup2,
         },
         {
@@ -29,7 +29,7 @@ export default {
           description: "Languages learned only with practice",
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://language.mikoogla.me/",
-          sourceCodeLink: "https://github.com/mikoogla/LearningLanguagesApp",
+          sourceLink: "https://github.com/mikoogla/LearningLanguagesApp",
           background: mockup3,
         },
         {
@@ -39,7 +39,7 @@ export default {
           description: "some description about this app",
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://mikoogla.me/",
-          sourceCodeLink: "https://github.com/mikoogla",
+          sourceLink: "https://github.com/mikoogla",
           background: defaultmockup,
         },
         {
@@ -49,10 +49,11 @@ export default {
           description: "some description about this app",
           techStack: ["React", "Redux", "React Router", "Firebase"],
           siteLink: "https://mikoogla.me/",
-          sourceCodeLink: "https://github.com/mikoogla",
+          sourceLink: "https://github.com/mikoogla",
           background: defaultmockup,
         },
       ],
+      currentProject: {},
     };
   },
   mutations: mutations,

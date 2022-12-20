@@ -11,18 +11,8 @@ import { mapActions, mapGetters } from "vuex";
       <ProjectItem
         v-for="project in getProjects"
         :key="project.id"
-        :background-url="project.background"
-        :project-name="project.name"
+        :project="project"
       >
-        <template #title> {{ project.title }}</template>
-        <template #description>
-          {{ project.description }}
-        </template>
-        <template #iconName> tips_and_updates </template>
-        <template #buttonText> More Info </template>
-        <template #technologies>
-          <p>techbar</p>
-        </template>
       </ProjectItem>
     </div>
   </div>
@@ -49,7 +39,7 @@ export default {
   },
   mounted() {
     this.setProjectsPosition(this.$refs.position.offsetTop || 0);
-    window.addEventListener("resize", this.setPosition);
+    // window.addEventListener("resize", this.setPosition);
   },
 };
 </script>

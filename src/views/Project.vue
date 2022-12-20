@@ -1,22 +1,30 @@
 <script setup>
 import Button from "../UI/Button.vue";
+import { mapGetters } from "vuex";
+import { onMounted } from "vue";
 </script>
 
 <template>
-  <div class="project-container">
+  <div
+    class="project-container"
+    :style="{ backgroundImage: `url(${getCurrentProject.background})` }"
+  >
     <div class="section">
       <div class="title">
-        <h1>{{ project.title }}</h1>
+        <h1>{{ getCurrentProject.title || "Failed" }}</h1>
+      </div>
+      <div class="description">
+        {{ getCurrentProject.description || "Failed" }}
       </div>
 
       <div class="button-container">
-        <Button>
+        <Button @click="openSite">
           <template #icon>
             <span class="material-symbols-outlined"> link </span>
           </template>
           <template #text>Visit Site</template>
         </Button>
-        <Button>
+        <Button @click="openSource">
           <template #icon>
             <span class="material-symbols-outlined"> code </span>
           </template>
@@ -36,17 +44,29 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      project: {
-        title: "default title",
-        description: "default description",
-        techStack: ["Vue", "Vuex", "Vue Router", "Firebase", "Bootstrap"],
-        siteLink: "#",
-        sourceCodeLink: "#",
-      },
+      project: {},
     };
   },
-  mounted() {
-    console.log("router path id: " + this.$route.params.id);
+  methods: {
+    openSite() {
+      window.open(this.getCurrentProject.siteLink, "_blank");
+    },
+    openSource() {
+      window.open(this.getCurrentProject.sourceLink, "_blank");
+    },
+  },
+  beforeMount() {},
+  onUpdated() {
+    if (this.getCurrentProject.title) {
+      console.log("Current Project");
+      this.project = this.getCurrentProject();
+    } else {
+      console.log("Project by name");
+      this.project = this.getProjectByName(this.$route.params.id);
+    }
+  },
+  computed: {
+    ...mapGetters(["getCurrentProject", "getProjectByName"]),
   },
 };
 </script>
@@ -75,6 +95,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  backdrop-filter: blur(10px);
 }
 .button-container {
   max-width: 300px;

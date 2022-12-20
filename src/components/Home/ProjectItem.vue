@@ -2,6 +2,7 @@
 import Card from "../../UI/Card.vue";
 import Button from "../../UI/Button.vue";
 import defaultimage from "../../assets/default.png";
+import { mapActions } from "vuex";
 </script>
 
 <template>
@@ -10,34 +11,24 @@ import defaultimage from "../../assets/default.png";
       <div class="left">
         <div class="title">
           <h2>
-            <slot name="title"> Quizx - Quiz App </slot>
+            {{ project.title }}
           </h2>
         </div>
         <div class="description">
-          <slot name="description">
-            Application built to help you learn the language in a natural way,
-            using known words dictionary and your own materials.
-            <strong
-              >Placeholders: title, description, iconName, buttonText</strong
-            >
-          </slot>
+          {{ project.description }}
         </div>
         <div class="button-container">
           <Button @click="goToProject">
             <template #icon>
-              <span class="material-symbols-outlined">
-                <slot name="iconName"> tune </slot></span
-              >
+              <span class="material-symbols-outlined"> tips_and_updates </span>
             </template>
-            <template #text>
-              <slot name="buttonText"> More Info </slot>
-            </template>
+            <template #text> More Info </template>
           </Button>
         </div>
       </div>
       <div
         class="right"
-        :style="{ backgroundImage: `url(&quot;${backgroundUrl}&quot;)` }"
+        :style="{ backgroundImage: `url(&quot;${project.background}&quot;)` }"
       >
         <div class="technologies">
           <slot name="technologies">
@@ -49,7 +40,7 @@ import defaultimage from "../../assets/default.png";
         <Button class="button-styling-mobile" @click="goToProject">
           <template #icon>
             <span class="material-symbols-outlined">
-              <slot name="iconName"> tune </slot></span
+              <slot name="iconName"> tips_and_updates </slot></span
             >
           </template>
           <template #text>
@@ -64,19 +55,18 @@ import defaultimage from "../../assets/default.png";
 <script>
 export default {
   props: {
-    backgroundUrl: {
-      type: String,
-      default: defaultimage,
-    },
-    projectName: {
-      type: String,
-      default: "",
+    project: {
+      type: Object,
+      default: () => ({}),
     },
   },
   methods: {
     goToProject() {
-      this.$router.push("/project/" + this.projectName);
+      this.setCurrentProject(this.project).then(() => {
+        this.$router.push("/project/" + this.project.name);
+      });
     },
+    ...mapActions(["setCurrentProject"]),
   },
 };
 </script>
