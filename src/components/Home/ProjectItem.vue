@@ -93,7 +93,6 @@ export default {
 .right {
   width: 100%;
   border-radius: 0 10px 10px 0;
-  /* background-image: url("../../assets/mockup.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,7 +125,7 @@ export default {
 @media (max-width: 768px) {
   .item-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     padding: 0;
   }
   .left {
