@@ -1,5 +1,9 @@
 <template>
   <div class="navbar-container">
+    <MobileMenu
+      :style="{ display: isMenuVisible ? 'none' : '' }"
+      @click="showMenu"
+    />
     <RouterLink to="/"> <div class="logo">Mikoogla</div></RouterLink>
     <div class="navigation">
       <RouterLink class="mobile-off navtext" to="/">Home</RouterLink>
@@ -15,8 +19,13 @@
 </template>
 
 <script setup>
+import MobileMenu from "./MobileMenu.vue";
+import { ref } from "vue";
+
+const isMenuVisible = ref(false);
+
 function showMenu() {
-  alert("menu will be heree");
+  isMenuVisible.value = !isMenuVisible.value;
 }
 function languageChange() {
   alert("changing Language");

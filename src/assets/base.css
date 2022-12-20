@@ -14,6 +14,7 @@
   --size-font: calc(1rem - var(--prescaler));
   --size-font-medium: calc(1.2rem - var(--prescaler));
   --size-font-large: calc(1.4rem - var(--prescaler));
+  --size-font-xl: calc(2rem - var(--prescaler));
   --size-h1: calc(3rem - var(--prescaler));
   --size-quadrant: 500px;
 
