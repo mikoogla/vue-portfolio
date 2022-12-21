@@ -57,23 +57,37 @@ h1 {
 }
 .project-container {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  padding: 20px 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards-container {
+  width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-gap: 20px;
-
-  padding: 20px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;*/
+  padding: 0px;
+  border-radius: 10px;
 }
-
+@media (min-width: 1600px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+  }
+}
 @media (max-width: 1300px) {
   .cards-container {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 3rem 0;

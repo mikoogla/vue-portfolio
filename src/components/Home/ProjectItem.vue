@@ -122,7 +122,8 @@ export default {
 .mobile-button {
   display: none;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 768px), (min-width: 1600px) {
   .item-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;

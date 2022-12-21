@@ -33,7 +33,7 @@ export default {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (min-width: 1600px) {
   .techbar-container {
     flex-direction: row;
     width: 100%;
