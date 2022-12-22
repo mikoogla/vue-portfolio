@@ -2,6 +2,8 @@
 import Card from "../../UI/Card.vue";
 import axios from "axios";
 import Button from "../../UI/Button.vue";
+import image1 from "../../assets/image.png";
+import image2 from "../../assets/image2.png";
 import { mapActions, mapGetters } from "vuex";
 </script>
 
@@ -44,6 +46,22 @@ import { mapActions, mapGetters } from "vuex";
             </template>
             <template #text>{{ text.contactSection.submitButton }}</template>
           </Button>
+        </div>
+
+        <div class="direct">
+          <div class="direct-item">
+            <div>{{ text.contactSection.phone }}</div>
+            <div class="phone">
+              <div>+48</div>
+              <div>536</div>
+              <div>812</div>
+              <div>086</div>
+            </div>
+          </div>
+          <div class="direct-item">
+            <div>Email:</div>
+            <div>mikoogla.dev@gmail.com</div>
+          </div>
         </div>
       </form>
     </Card>
@@ -132,6 +150,19 @@ h1 {
   font-size: var(--size-h1);
   overflow: hidden;
 }
+.direct {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+}
+.direct-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 .button-container {
   width: 50%;
   display: flex;
@@ -189,6 +220,12 @@ h1 {
   display: none;
   transition: all 0.5s ease;
 }
+.phone {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
 .visible {
   display: block;
 }
@@ -217,12 +254,18 @@ h1 {
 @media (max-width: 560px) {
   .email,
   .message,
-  .name {
+  .name,
+  .direct {
     width: 100%;
   }
   .button-container,
   .button {
     width: 100%;
+  }
+
+  .direct-item {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

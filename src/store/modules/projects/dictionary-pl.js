@@ -67,6 +67,7 @@ const texts = {
     nameHolder: "imię",
     sendPrompt: "Dziękuję za wiadomość",
     sendPrompt2: "Odpowiem jak najszybciej",
+    phone: "Telefon: ",
   },
   projectInfo: {
     siteButton: "Odwiedź stronę",
