@@ -29,7 +29,7 @@ const projects = [
     description: "It's the site you are currently browsing.",
     techStack: ["Vue", "Vuex", "Firebase"],
     siteLink: "https://mikoogla.me/",
-    sourceLink: "https://github.com/mikoogla",
+    sourceLink: "https://github.com/mikoogla/vue-portfolio",
     background: defaultmockup,
   },
 ];
