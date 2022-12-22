@@ -53,14 +53,14 @@ import { mapActions, mapGetters } from "vuex";
             <div>{{ text.contactSection.phone }}</div>
             <div class="phone">
               <div>+48</div>
-              <div>536</div>
-              <div>812</div>
-              <div>086</div>
+              <div>000</div>
+              <div>000</div>
+              <div>000</div>
             </div>
           </div>
           <div class="direct-item">
             <div>Email:</div>
-            <div>mikoogla.dev@gmail.com</div>
+            <div>test@email.test</div>
           </div>
         </div>
       </form>
