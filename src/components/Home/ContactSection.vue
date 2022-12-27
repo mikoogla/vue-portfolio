@@ -53,14 +53,14 @@ import { mapActions, mapGetters } from "vuex";
             <div>{{ text.contactSection.phone }}</div>
             <div class="phone">
               <div>+48</div>
-              <div>536</div>
-              <div>812</div>
-              <div>086</div>
+              <div>000</div>
+              <div>000</div>
+              <div>000</div>
             </div>
           </div>
           <div class="direct-item">
             <div>Email:</div>
-            <div>mikoogla.dev@gmail.com</div>
+            <div>mail@mail.mail</div>
           </div>
         </div>
       </form>
@@ -87,12 +87,9 @@ export default {
     onSubmit() {
       console.log("submit");
       //send webhook
-      axios.post(
-        "https://discord.com/api/webhooks/1054438690547580968/s-96_bATNcPr71tFWhDhlqPHoV6JhD2yyp8Qf_PlVbYKbj4PscAYDtipaDTRi-O22B8Q",
-        {
-          content: `Name: ${this.name} \n Email: ${this.email} \n Message: ${this.message}  `,
-        }
-      );
+      axios.post("https://discord.com/api/webhooks/", {
+        content: `Name: ${this.name} \n Email: ${this.email} \n Message: ${this.message}  `,
+      });
       this.message = "";
       this.email = "";
       this.name = "";
