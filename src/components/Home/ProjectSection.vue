@@ -9,9 +9,20 @@ import { mapActions, mapGetters } from "vuex"
 
 		<div class="cards-container">
 			<ProjectItem
-				v-for="(_, index) in 3"
-				:key="getProjects[index].id"
-				:project="getProjects[index]"
+				:key="getProjects[0].id"
+				:project="getProjects[0]"
+				:buttonText="text.projectsSection.buttonText"
+			>
+			</ProjectItem>
+			<ProjectItem
+				:key="getProjects[1].id"
+				:project="getProjects[1]"
+				:buttonText="text.projectsSection.buttonText"
+			>
+			</ProjectItem>
+			<ProjectItem
+				:key="getProjects[2].id"
+				:project="getProjects[2]"
 				:buttonText="text.projectsSection.buttonText"
 			>
 			</ProjectItem>
@@ -55,10 +66,6 @@ export default {
 			text: "getTexts",
 		}),
 	},
-	mounted() {
-		this.setProjectsPosition(this.$refs.position.offsetTop || 0)
-		// window.addEventListener("resize", this.setPosition);
-	},
 }
 </script>
 
@@ -76,6 +83,7 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	padding: 20px 20px;
+	overflow: hidden;
 }
 
 .cards-container {
@@ -91,10 +99,10 @@ h1 {
 .cards-container-second {
 	width: 80%;
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 20px;
-	margin-top: 4rem;
+	margin-top: 1rem;
 	padding: 0px;
 	border-radius: 10px;
 }
@@ -104,9 +112,20 @@ h1 {
 		grid-template-rows: 1fr;
 		grid-gap: 20px;
 	}
+	.cards-container-second {
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 20px;
+	}
 }
 @media (max-width: 1300px) {
 	.cards-container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	.cards-container-second {
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr;
