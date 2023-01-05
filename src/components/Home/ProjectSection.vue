@@ -9,9 +9,23 @@ import { mapActions, mapGetters } from "vuex"
 
 		<div class="cards-container">
 			<ProjectItem
-				v-for="project in getProjects"
-				:key="project.id"
-				:project="project"
+				v-for="(_, index) in 3"
+				:key="getProjects[index].id"
+				:project="getProjects[index]"
+				:buttonText="text.projectsSection.buttonText"
+			>
+			</ProjectItem>
+		</div>
+		<div class="cards-container-second">
+			<ProjectItem
+				:key="getProjects[3].id"
+				:project="getProjects[3]"
+				:buttonText="text.projectsSection.buttonText"
+			>
+			</ProjectItem>
+			<ProjectItem
+				:key="getProjects[3].id"
+				:project="getProjects[3]"
 				:buttonText="text.projectsSection.buttonText"
 			>
 			</ProjectItem>
@@ -71,6 +85,16 @@ h1 {
 	grid-template-rows: 1fr;
 	grid-gap: 20px;
 
+	padding: 0px;
+	border-radius: 10px;
+}
+.cards-container-second {
+	width: 80%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 20px;
+	margin-top: 4rem;
 	padding: 0px;
 	border-radius: 10px;
 }
