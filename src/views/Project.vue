@@ -9,6 +9,12 @@ import { mapGetters } from "vuex"
 		:style="{ backgroundImage: `url(${getCurrentProject.background})` }"
 	>
 		<div class="section">
+			<Button @click="goBack" class="button-background">
+				<template #icon>
+					<span class="material-symbols-outlined"> arrow_back_ios </span>
+				</template>
+				<template #text>{{ text.projectInfo.goBackButton }}</template>
+			</Button>
 			<div class="title">
 				<h1>{{ getCurrentProject.title || "Reading failed" }}</h1>
 				<div class="description">
@@ -55,6 +61,9 @@ export default {
 		},
 		openSource() {
 			window.open(this.getCurrentProject.sourceLink, "_blank")
+		},
+		goBack() {
+			this.$router.push("/")
 		},
 	},
 	beforeMount() {},
@@ -127,6 +136,16 @@ h1 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.button-background {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 0;
+	filter: unset;
+	width: 300px;
+}
+.button-background:hover {
+	background-color: var(--color-background-layout);
+	filter: contrast(0.7);
 }
 
 @media (max-width: 768px) {

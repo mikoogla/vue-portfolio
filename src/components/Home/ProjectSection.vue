@@ -66,6 +66,9 @@ export default {
 			text: "getTexts",
 		}),
 	},
+	mounted() {
+		this.setPosition()
+	},
 }
 </script>
 

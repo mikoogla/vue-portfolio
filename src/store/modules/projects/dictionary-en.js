@@ -93,6 +93,7 @@ const texts = {
 	projectInfo: {
 		siteButton: "Visit Site",
 		sourceButton: "Source Code",
+		goBackButton: "Return",
 	},
 }
 

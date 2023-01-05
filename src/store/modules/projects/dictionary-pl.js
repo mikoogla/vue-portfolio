@@ -92,6 +92,7 @@ const texts = {
 	projectInfo: {
 		siteButton: "Odwiedź stronę",
 		sourceButton: "Zobacz kod źródłowy",
+		goBackButton: "Powrót",
 	},
 }
 export { projects, texts }
