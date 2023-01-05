@@ -24,8 +24,8 @@ import { mapActions, mapGetters } from "vuex"
 			>
 			</ProjectItem>
 			<ProjectItem
-				:key="getProjects[3].id"
-				:project="getProjects[3]"
+				:key="getProjects[4].id"
+				:project="getProjects[4]"
 				:buttonText="text.projectsSection.buttonText"
 			>
 			</ProjectItem>
