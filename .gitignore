@@ -16,7 +16,6 @@ coverage
 *.cache
 /cypress/videos/
 /cypress/screenshots/
-/ContactSection.vue
 
 # Editor directories and files
 .vscode/*
@@ -28,4 +27,5 @@ coverage
 *.sln
 *.sw?
 .firebase/*
+*ContactSection*
 src/components/Home/ContactSection.vue
