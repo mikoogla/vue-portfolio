@@ -57,11 +57,11 @@ h1 {
 }
 .project-container {
 	min-height: 100vh;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 20px 20px;
 }
 
 .cards-container {
@@ -70,11 +70,7 @@ h1 {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 20px;
-	/* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;*/
+
 	padding: 0px;
 	border-radius: 10px;
 }
@@ -91,12 +87,11 @@ h1 {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr;
-		padding: 2rem;
 	}
 }
 @media (max-width: 768px) {
 	.project-container {
-		padding: 0;
+		padding: 20px 20px;
 	}
 	h1 {
 		padding-left: 20px;
