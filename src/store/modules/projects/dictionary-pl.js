@@ -45,7 +45,7 @@ const projects = [
 		id: 5,
 		name: "Other Projects",
 		title: "Other Projects",
-		description: "Other projects I've worked on",
+		description: "Inne projekty, nad którymi pracowałem",
 		techStack: ["Vue", "React"],
 		siteLink: "https://mikoogla.me/",
 		sourceLink: "https://github.com/mikoogla",
