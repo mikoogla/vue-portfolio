@@ -61,9 +61,14 @@ export default {
 			type: String,
 			default: "More Info",
 		},
+		redirectionLink: {
+			type: String,
+		},
 	},
 	methods: {
 		goToProject() {
+			if (this.redirectionLink)
+				return this.$router.push(`/${this.redirectionLink}`)
 			this.setCurrentProject(this.project).then(() => {
 				this.$router.push("/project/" + this.project.name)
 			})

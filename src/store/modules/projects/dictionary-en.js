@@ -95,6 +95,9 @@ const texts = {
 		sourceButton: "Source Code",
 		goBackButton: "Return",
 	},
+	more: {
+		title: "More Projects will be added soon",
+	},
 }
 
 export { projects, texts }

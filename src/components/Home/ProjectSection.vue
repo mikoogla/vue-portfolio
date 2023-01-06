@@ -38,6 +38,7 @@ import { mapActions, mapGetters } from "vuex"
 				:key="getProjects[4].id"
 				:project="getProjects[4]"
 				:buttonText="text.projectsSection.buttonText"
+				redirection-link="more"
 			>
 			</ProjectItem>
 		</div>
