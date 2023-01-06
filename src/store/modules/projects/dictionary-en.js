@@ -36,7 +36,7 @@ const projects = [
 		id: 4,
 		name: "Gym App",
 		title: "Gym App",
-		description: "[work in progress]",
+		description: "[team project - work in progress]",
 		techStack: ["Vue", "Vuex", "Vuetify", "Firebase"],
 		siteLink: "https://gymapp.mikoogla.me/",
 		sourceLink: "https://github.com/mikoogla",
