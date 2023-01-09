@@ -29,12 +29,14 @@ import { mapActions, mapGetters } from "vuex"
 		</div>
 		<div class="cards-container-second">
 			<ProjectItem
+				sourceCodeDisabled
 				:key="getProjects[3].id"
 				:project="getProjects[3]"
 				:buttonText="text.projectsSection.buttonText"
 			>
 			</ProjectItem>
 			<ProjectItem
+				sourceCodeDisabled
 				:key="getProjects[4].id"
 				:project="getProjects[4]"
 				:buttonText="text.projectsSection.buttonText"

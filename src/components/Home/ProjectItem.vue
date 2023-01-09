@@ -64,12 +64,19 @@ export default {
 		redirectionLink: {
 			type: String,
 		},
+		sourceCodeDisabled: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	methods: {
 		goToProject() {
 			if (this.redirectionLink)
 				return this.$router.push(`/${this.redirectionLink}`)
-			this.setCurrentProject(this.project).then(() => {
+			this.setCurrentProject({
+				...this.project,
+				sourceCodeDisabled: this.sourceCodeDisabled,
+			}).then(() => {
 				this.$router.push("/project/" + this.project.name)
 			})
 		},

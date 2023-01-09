@@ -32,11 +32,18 @@ import { mapGetters } from "vuex"
 					</template>
 					<template #text>{{ text.projectInfo.siteButton }}</template>
 				</Button>
-				<Button @click="openSource">
+				<Button
+					:disabled="getCurrentProject.sourceCodeDisabled"
+					@click="openSource"
+				>
 					<template #icon>
 						<span class="material-symbols-outlined"> code </span>
 					</template>
-					<template #text>{{ text.projectInfo.sourceButton }}</template>
+					<template #text>{{
+						getCurrentProject.sourceCodeDisabled
+							? text.projectInfo.sourceDisabled
+							: text.projectInfo.sourceButton
+					}}</template>
 				</Button>
 			</div>
 		</div>
@@ -49,6 +56,7 @@ export default {
 	components: {
 		Button,
 	},
+
 	data() {
 		return {
 			id: this.$route.params.id,
@@ -60,6 +68,7 @@ export default {
 			window.open(this.getCurrentProject.siteLink, "_blank")
 		},
 		openSource() {
+			if (this.getCurrentProject.sourceCodeDisabled) return
 			window.open(this.getCurrentProject.sourceLink, "_blank")
 		},
 		goBack() {
@@ -75,6 +84,9 @@ export default {
 			console.log("Project by name")
 			this.project = this.getProjectByName(this.$route.params.id)
 		}
+	},
+	mounted() {
+		console.log("current: ", this.getCurrentProject)
 	},
 	computed: {
 		...mapGetters(["getCurrentProject", "getProjectByName"]),

@@ -93,6 +93,7 @@ const texts = {
 	projectInfo: {
 		siteButton: "Visit Site",
 		sourceButton: "Source Code",
+		sourceDisabled: "Code available on request",
 		goBackButton: "Return",
 	},
 	more: {
