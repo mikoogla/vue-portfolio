@@ -5,8 +5,12 @@ import Contact from "../views/Contact.vue"
 import MoreProjects from "../views/MoreProjects.vue"
 
 const router = createRouter({
-	scrollBehavior() {
-		return { top: 0 }
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition
+		} else {
+			return { top: 0 }
+		}
 	},
 
 	history: createWebHistory(),

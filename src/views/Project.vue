@@ -72,7 +72,7 @@ export default {
 			window.open(this.getCurrentProject.sourceLink, "_blank")
 		},
 		goBack() {
-			this.$router.push("/")
+			this.$router.go(-1)
 		},
 	},
 	beforeMount() {},
