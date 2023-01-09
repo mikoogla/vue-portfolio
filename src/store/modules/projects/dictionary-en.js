@@ -1,4 +1,4 @@
-import { mockup2, mockup3, defaultmockup, gymMockup, mockup6 } from "./Mockups"
+import { mockup2, mockup3, defaultmockup, gymMockup, mockup7 } from "./Mockups"
 
 const projects = [
 	{
@@ -44,13 +44,13 @@ const projects = [
 	},
 	{
 		id: 5,
-		name: "Other Projects",
-		title: "Other Projects",
-		description: "Other projects I've been working on",
-		techStack: ["Vue", "React"],
-		siteLink: "https://mikoogla.me/",
+		name: "Commands Generator",
+		title: "Commands Generator",
+		description: "Midjourney commands generator",
+		techStack: ["Vue", "Vuex", "Vuetify"],
+		siteLink: "https://mid-textgen.web.app/",
 		sourceLink: "https://github.com/mikoogla",
-		background: mockup6,
+		background: mockup7,
 	},
 ]
 
