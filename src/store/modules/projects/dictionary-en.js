@@ -96,9 +96,6 @@ const texts = {
 		sourceDisabled: "Code available on request",
 		goBackButton: "Return",
 	},
-	more: {
-		title: "More Projects will be added soon",
-	},
 }
 
 export { projects, texts }

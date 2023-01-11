@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router"
 import Home from "../views/Home.vue"
 import Project from "../views/Project.vue"
 import Contact from "../views/Contact.vue"
-import MoreProjects from "../views/MoreProjects.vue"
 
 const router = createRouter({
 	scrollBehavior(to, from, savedPosition) {
@@ -35,11 +34,6 @@ const router = createRouter({
 			path: "/contact",
 			name: "contact",
 			component: Contact,
-		},
-		{
-			path: "/more",
-			name: "more projects",
-			component: MoreProjects,
 		},
 		{
 			path: "/:notFound(.*)",

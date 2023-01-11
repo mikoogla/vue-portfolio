@@ -95,8 +95,5 @@ const texts = {
 		sourceDisabled: "Kod źródłowy na życzenie",
 		goBackButton: "Powrót",
 	},
-	more: {
-		title: "Więcej projektów będzie dostępnych wkrótce",
-	},
 }
 export { projects, texts }
